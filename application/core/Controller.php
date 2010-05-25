@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @package Garson
+ * @author Argel Arias <levhita@gmail.com>
+ */
 class Controller
 {
   /**

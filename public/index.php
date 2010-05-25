@@ -1,7 +1,7 @@
 <?php
 /**
  * Front Controller for the application
- * @package TianguisCabal
+ * @package Garson
  */
  
 /*

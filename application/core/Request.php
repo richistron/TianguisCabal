@@ -1,4 +1,8 @@
 <?php
+/**
+ * @package Garson
+ * @author Argel Arias <levhita@gmail.com>
+ */
 class Request {
   protected static $__instance = null;
   

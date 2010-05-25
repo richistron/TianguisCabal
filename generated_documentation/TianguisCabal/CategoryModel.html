@@ -40,25 +40,15 @@
       	  <div class="package">
 			<a href="../TianguisCabal/_application---models---CategoryModel.php.html">		CategoryModel.php
 		</a><br>
-			<a href="../TianguisCabal/_application---layouts---detail.phtml.html">		detail.phtml
+			<a href="../TianguisCabal/_application---layouts---default.phtml.html">		default.phtml
 		</a><br>
-			<a href="../TianguisCabal/_application---layouts---footer.phtml.html">		footer.phtml
-		</a><br>
-			<a href="../TianguisCabal/_application---layouts---header.phtml.html">		header.phtml
-		</a><br>
-			<a href="../TianguisCabal/_public---index.php.html">		index.php
-		</a><br>
-			<a href="../TianguisCabal/_application---layouts---index.phtml.html">		index.phtml
+			<a href="../TianguisCabal/_application---views---index---index.phtml.html">		index.phtml
 		</a><br>
 			<a href="../TianguisCabal/_application---controllers---IndexController.php.html">		IndexController.php
 		</a><br>
-			<a href="../TianguisCabal/_application---views---IndexView.php.html">		IndexView.php
-		</a><br>
 			<a href="../TianguisCabal/_scripts---install.php.html">		install.php
 		</a><br>
-			<a href="../TianguisCabal/_application---layouts---list.phtml.html">		list.phtml
-		</a><br>
-			<a href="../TianguisCabal/_application---views---View.php.html">		View.php
+			<a href="../TianguisCabal/_application---views---index---message.phtml.html">		message.phtml
 		</a><br>
 	  </div><br />
       
@@ -67,8 +57,6 @@
         <div class="package">
 		    		<a href="../TianguisCabal/CategoryModel.html">CategoryModel</a><br />
 	    		<a href="../TianguisCabal/IndexController.html">IndexController</a><br />
-	    		<a href="../TianguisCabal/IndexView.html">IndexView</a><br />
-	    		<a href="../TianguisCabal/View.html">View</a><br />
 	  </div>
                 </td>
     <td>
@@ -86,11 +74,15 @@ Source Location: /application/models/CategoryModel.php<br /><br />
    |
    --CategoryModel</pre><br />
 <div class="description">Extends DAO to provide Category Specific functionality</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>Argel Arias &lt;<a href="mailto:levhita@gmail.com">levhita@gmail.com</a>&gt;</li>
+      </ul>
 
 
 
 
-
+    
 
         
 </td>
@@ -101,6 +93,7 @@ Source Location: /application/models/CategoryModel.php<br /><br />
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
     <li><a href="../TianguisCabal/CategoryModel.html#method__construct">__construct</a></li>
+    <li><a href="../TianguisCabal/CategoryModel.html#methodgetAll">getAll</a></li>
   </ul>
 </td>
 
@@ -250,8 +243,17 @@ Source Location: /application/models/CategoryModel.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_TianguisCabal__applicationmodelsCategoryModel.php.html#a11">11</a>]<br />
-Extends DAO to provide Category Specific functionality<br /><br /></div><br /><br />
+[line <a href="../__filesource/fsource_TianguisCabal__applicationmodelsCategoryModel.php.html#a7">7</a>]<br />
+Extends DAO to provide Category Specific functionality<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>Argel Arias &lt;<a href="mailto:levhita@gmail.com">levhita@gmail.com</a>&gt;</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
 
@@ -259,10 +261,35 @@ Extends DAO to provide Category Specific functionality<br /><br /></div><br /><b
 <a name="class_methods"></a>
 <h3>Class Methods</h3>
 <div class="tags">
+  <hr />
+	<a name="methodgetAll"></a>
+	<h3>static method getAll <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationmodelsCategoryModel.php.html#a17">17</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static array getAll(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets All Categories<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationmodelsCategoryModel.php.html#a12">12</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationmodelsCategoryModel.php.html#a9">9</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -301,7 +328,7 @@ $id)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Tue, 04 May 2010 00:24:31 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Tue, 25 May 2010 00:39:43 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
