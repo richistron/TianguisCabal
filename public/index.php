@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Front Controller for the application
  * @package TianguisCabal
@@ -26,38 +26,46 @@ set_include_path( implode( PATH_SEPARATOR, array(
  */
 function __autoload($class_name)
 {
-    // replace underscores for path delimiters
-    $path = str_replace('_', '/', $class_name);
+    $class_name = ucwords($class_name);
     
-    // check for controllers
-    $path = ( stristr( $class_name, 'controller' ) ) ? 'controllers/' . $path : $path;
-    
-    // check for views
-    $path = ( stristr( $class_name, 'view' ) ) ? 'views/' . $path : $path;
-    
-    // check for models
-    $path = ( stristr( $class_name, 'model' ) ) ? 'models/' . $path : $path;
-    
-    // add the application path and the php extension
+    /* Application Specific Classes are inside this directories */
+    $named_directories = array
+    (
+      'Controller' => 'controllers/',
+      'View' => 'views/',
+      'Model' => 'models/',
+    );
+    $is_core = true;
+    foreach ( $named_directories AS $name => $directory ) {
+      if ( stristr($class_name, $name) && $class_name!=$name ){
+          $path = $directory . $class_name;
+          $is_core = false;
+          break;
+      }
+    }
+    /* All other classes are inside the core */
+    if ($is_core) {
+        $path = 'core/' . $class_name;
+    }
+   
+    /* add the application path and the php extension */
     require_once APPLICATION_PATH . '/' . $path . '.php';
 }
 
 /**
- * URL = TianguisCabal/test/test/1
- * url_rewrite= TianguisCabal/index.php&controller=test&action=test&value=1
+ * URL = TianguisCabal/test/test/?param1=value1&param2=value2
+ * url_rewrite= TianguisCabal/index.php?controller=test&action=index&param1=value1&param2=value2
  * test => TestController
- * TEST => testAction
+ * index => indexAction
  */
 
 if( !isset( $_GET['controller'] ) OR !isset( $_GET['action'] ) ) {
     $controller = "IndexController";
     $action     = "indexAction";
-    $value      = '';
 } else {
     $controller = ucwords( $_GET['controller'] ) . "Controller";
     $action     = strtolower( $_GET['action'] ) . "Action";
-    $value      = ( isset( $_GET['value'] ) ) ? '' : $_GET['value'];
 }
 
 $Controller = new $controller();
-$Controller->$action( $value );
+$Controller->$action();

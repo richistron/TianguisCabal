@@ -4,7 +4,7 @@
  */
 define ('APPLICATION_PATH', '../application');
 require_once 'PHPUnit/Framework.php';
-require_once APPLICATION_PATH. "/Config.php";
+require_once APPLICATION_PATH. "/core/Config.php";
 
 /**
  * Test Suite for {@link Config}
