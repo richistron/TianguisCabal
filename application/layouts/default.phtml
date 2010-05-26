@@ -1,0 +1,54 @@
+<?php
+/**
+ * Default Layout
+ * @todo Clearly state which are the _private_ variables
+ * @package TianguisCabal
+ */
+
+/*
+ * By default the server will send the "correct" encoding but is cleaner if we
+ * define it, by example in layouts that generate plain text or XML.
+ */
+header("Content-Type: text/html; charset=utf-8");
+
+/* Default XML and Encoding settings */
+echo '<?xml version="1.0" encoding="UTF-8"?>';
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $Vars->_language_ ?>" lang="<?php echo $Vars->_language_ ?>">
+    <head>
+      <title>Tianguis Cabal - <?php echo $Vars->_title_ ?></title>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="css/main.css" />
+      <script charset="utf-8" type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+      <div id="main">
+        
+            <div id="overlay_shadow" class="hidden"></div>
+            <div id="overlay" class="hidden">
+              
+              <div id="message">
+              <?php if( isset($Vars->_message_) ){
+                echo $Vars->_message_;
+                echo '<script type="text/javascript">showOverlay();</script>';
+              }?>
+              </div>
+              <div class="close_link"><a href="javascript:void(0);" onclick="closeOverlay();">Cerrar</a></div>
+            </div>
+        
+        <div id="header">
+            <h1><a href="index.php">Tianguis Cabal</a><?php echo $Vars->_title_?></h1>
+        </div>
+        
+        <div id="content">
+            <?php echo $Vars->_template_content_ ?>
+        </div>
+            
+        <div id="footer">
+            TianguisCabal <?php echo date('Y'); ?>
+        </div>
+      </div>
+    </body>
+</html>
