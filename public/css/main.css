@@ -15,7 +15,9 @@ body{
 #overlay.hidden, #overlay_shadow.hidden {
  display:none;
 }
-
+#header h1 a {
+	float:right;
+	}
 #overlay.visible {
   position: absolute;
   display:block;
@@ -36,7 +38,7 @@ body{
   height:100%;
   background:black;
   opacity: 0.5;
-  filter: alpha(opacity = 50);
+  /*filter: alpha(opacity = 50);*/
 }
 
 #overlay .close_link {
