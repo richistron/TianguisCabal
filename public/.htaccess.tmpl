@@ -3,8 +3,10 @@
 RewriteEngine on
 
 #In your local config you might need to reconfig this, by example lets say that
-#your local copy is in: http://localhost/repositories/tiaguiscabal/
-#then your rewrite base would be: /repositories/tianguiscabal/
+#your local public dir is viewable by: http://localhost/repositories/tiaguiscabal/public
+#then your rewrite base would be: /repositories/tianguiscabal/public
+#in a server where "public" is visible directly in http://domain/, leave this as '/'
+#Used in conjunction with web_root in config.ini
 RewriteBase /
 
 #These rules exclude real files and directories from the rewriting and lets them
