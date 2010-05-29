@@ -20,8 +20,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     <head>
       <title>Tianguis Cabal - <?php echo $Vars->_title_ ?></title>
       <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-      <link rel="stylesheet" type="text/css" href="css/main.css" />
-      <script charset="utf-8" type="text/javascript" src="js/main.js"></script>
+      <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ?>/css/main.css" />
+      <script charset="utf-8" type="text/javascript" src="<?php echo BASE_URL ?>/js/main.js"></script>
     </head>
     <body>
       <div id="main">
@@ -39,7 +39,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             </div>
         
         <div id="header">
-            <h1><a href="index.php">Tianguis Cabal</a><?php echo $Vars->_title_?></h1>
+            <h1><a href="<?php echo BASE_URL?>">Tianguis Cabal</a><?php echo $Vars->_title_?></h1>
         </div>
         
         <div id="content">
@@ -50,5 +50,23 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
             TianguisCabal <?php echo date('Y'); ?>
         </div>
       </div>
+      <?php if ( $logs = Logger::getWebLog() ) {
+        echo "<div id=\"logs\">\n\n";
+        foreach( $logs AS $log ) {
+        $Log= (object)$log;
+        ?>
+          <div class="log <?php echo $Log->level ?>">
+            <span class="level"><?php echo ucwords($Log->level) ?></span>
+            <span class="time"><?php echo date('d/m/Y h:m:s', $Log->time) ?></span><br/>
+            <?php echo $Log->name?><br/>
+            <?php if( !empty($Log->details) ) {?>
+            <pre><?php echo htmlspecialchars($Log->details) ?></pre>
+          <?php }?>
+          <span class="uri"><?php echo $Log->uri ?></span>
+          </div>
+        <?php
+        }
+        echo "</div>\n\n";
+      }?>
     </body>
 </html>
