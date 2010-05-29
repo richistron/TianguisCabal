@@ -48,6 +48,8 @@
 		</a><br>
 			<a href="../Garson/_public---index.php.html">		index.php
 		</a><br>
+			<a href="../Garson/_application---core---Logger.php.html">		Logger.php
+		</a><br>
 			<a href="../Garson/_application---core---Request.php.html">		Request.php
 		</a><br>
 			<a href="../Garson/_application---core---View.php.html">		View.php
@@ -61,6 +63,7 @@
 	    		<a href="../Garson/Controller.html">Controller</a><br />
 	    		<a href="../Garson/DAO.html">DAO</a><br />
 	    		<a href="../Garson/DbConnection.html">DbConnection</a><br />
+	    		<a href="../Garson/Logger.html">Logger</a><br />
 	    		<a href="../Garson/Request.html">Request</a><br />
 	    		<a href="../Garson/View.html">View</a><br />
 	  </div>
@@ -77,7 +80,7 @@ Source Location: /application/core/Request.php<br /><br />
 
 <h3><a href="#class_details">Class Overview</a></h3>
 <pre></pre><br />
-<div class="description"></div><br /><br />
+<div class="description">Class that handle Request related things, with a little effort can be used to  create from zero and re-create from current request.</div><br /><br />
 <h4>Author(s):</h4>
 <ul>
           <li>Argel Arias &lt;<a href="mailto:levhita@gmail.com">levhita@gmail.com</a>&gt;</li>
@@ -94,7 +97,11 @@ Source Location: /application/core/Request.php<br /><br />
 <td valign="top">
 <h3><a href="#class_vars">Variables</a></h3>
 <ul>
+    <li><a href="../Garson/Request.html#var$__action">$__action</a></li>
+    <li><a href="../Garson/Request.html#var$__controller">$__controller</a></li>
     <li><a href="../Garson/Request.html#var$__instance">$__instance</a></li>
+    <li><a href="../Garson/Request.html#var$__parameters">$__parameters</a></li>
+    <li><a href="../Garson/Request.html#var$__request_uri">$__request_uri</a></li>
   </ul>
 </td>
 
@@ -103,8 +110,11 @@ Source Location: /application/core/Request.php<br /><br />
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
     <li><a href="../Garson/Request.html#method__construct">__construct</a></li>
+    <li><a href="../Garson/Request.html#methodgetAction">getAction</a></li>
+    <li><a href="../Garson/Request.html#methodgetController">getController</a></li>
     <li><a href="../Garson/Request.html#methodgetInstance">getInstance</a></li>
     <li><a href="../Garson/Request.html#methodgetParams">getParams</a></li>
+    <li><a href="../Garson/Request.html#methodgetRequestUri">getRequestUri</a></li>
     <li><a href="../Garson/Request.html#method__get">__get</a></li>
   </ul>
 </td>
@@ -125,8 +135,8 @@ Source Location: /application/core/Request.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a6">6</a>]<br />
-<br /><br />
+[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a9">9</a>]<br />
+Class that handle Request related things, with a little effort can be used to  create from zero and re-create from current request.<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -145,8 +155,8 @@ Source Location: /application/core/Request.php<br /><br />
 	<a name="var$__instance"></a>
 	<p></p>
 	<h4>static $__instance = <span class="value">&nbsp;null</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a7">7</a>]</p>
-  <br /><br />
+	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a14">14</a>]</p>
+  Singleton instance<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -161,7 +171,103 @@ Source Location: /application/core/Request.php<br /><br />
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
+      <td><a href="../Garson/Request.html">Request</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$__action"></a>
+	<p></p>
+	<h4>$__action = <span class="value">&nbsp;'indexAction'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a26">26</a>]</p>
+  Action that this request is asking<br /><br /><p>Defaults to IndexAction</p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$__controller"></a>
+	<p></p>
+	<h4>$__controller = <span class="value">&nbsp;'IndexController'</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a20">20</a>]</p>
+  Controller that this request is asking<br /><br /><p>Defaults to <a href="../TianguisCabal/IndexController.html">IndexController</a></p><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$__parameters"></a>
+	<p></p>
+	<h4>$__parameters = <span class="value">&nbsp;''</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a32">32</a>]</p>
+  The last section of the uri<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$__request_uri"></a>
+	<p></p>
+	<h4>$__request_uri = <span class="value">&nbsp;''</span></h4>
+	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a37">37</a>]</p>
+  The full request_uri, after striping the BASE_URL<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
     </tr>
       </table>
 	</div><br /><br />
@@ -174,7 +280,7 @@ Source Location: /application/core/Request.php<br /><br />
 <div class="tags">
   <hr />
 	<a name="methodgetInstance"></a>
-	<h3>static method getInstance <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a15">15</a>]</span></h3>
+	<h3>static method getInstance <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a118">118</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -200,7 +306,7 @@ Source Location: /application/core/Request.php<br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a9">9</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a39">39</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -224,8 +330,58 @@ Source Location: /application/core/Request.php<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodgetAction"></a>
+	<h3>method getAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a138">138</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getAction(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetController"></a>
+	<h3>method getController <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a134">134</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getController(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodgetParams"></a>
-	<h3>method getParams <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a22">22</a>]</span></h3>
+	<h3>method getParams <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a125">125</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -249,8 +405,33 @@ Source Location: /application/core/Request.php<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodgetRequestUri"></a>
+	<h3>method getRequestUri <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a142">142</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getRequestUri(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="method__get"></a>
-	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a26">26</a>]</span></h3>
+	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a129">129</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -289,7 +470,7 @@ $field)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Tue, 25 May 2010 00:39:46 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sat, 29 May 2010 16:02:45 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
