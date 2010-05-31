@@ -32,7 +32,7 @@ class Config {
   
   /**
    * Loads the config from an ini file into an array
-   * 
+   *
    * To override the default just call Config::load('filename') with your custom
    * config.
    * @param string $filename
@@ -42,7 +42,7 @@ class Config {
   {
     $filename = ( empty( $filename ) ) ? APPLICATION_PATH . "/config.ini" : $filename;
     
-    if ( ! ( self::$_instances[$filename] instanceof self ) ) {
+    if ( !isset($_instances[$filename]) || !(self::$_instances[$filename] instanceof self) ) {
       self::$_instances[ $filename ] = new self( $filename );
     }
     return self::$_instances[ $filename ];
@@ -50,7 +50,7 @@ class Config {
   
   /**
    * Saves the config from the array file into an inifile
-   * 
+   *
    * To override the default just call Config::save('filename') with your custom
    * config.
    * @param string $filename
@@ -81,7 +81,7 @@ class Config {
   
   /**
    * Get a single value from the config
-   * 
+   *
    * In the first call, it loads the config file
    * @param string $field
    * @return string

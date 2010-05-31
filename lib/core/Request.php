@@ -41,8 +41,10 @@ class Request {
     $request_uri = $_SERVER[ 'REQUEST_URI'];
     
     /** Removes everything from the request uri, up to the base url **/
+    $base_url_len = strlen($base_url);
+    $request_uri_len = strlen($request_uri);
     $x = 0;
-    while ( $base_url{$x} == $request_uri{$x} ) {
+    while ( $x<$base_url_len && $x<$request_uri_len && $base_url{$x}==$request_uri{$x} ) {
       $x++;
     }
     $this->__request_uri = trim(substr($request_uri,$x), '/');

@@ -4,6 +4,8 @@
  * @package Garson
  */
 
+include "../lib/autoload.php";
+
 /**
  * Paths for the application
  * Copied directly from zf-tool's generated Front Controller.
@@ -18,12 +20,12 @@ $Config = Config::getInstance();
  */
 define('BASE_URL', $Config->base_url);
 
-/** Ensure library/ is on include_path **/
+/** Ensure lib/ is on include_path **/
 set_include_path(
   implode(
     PATH_SEPARATOR,
     array(
-      realpath( APPLICATION_PATH . '/../library' ),
+      realpath( APPLICATION_PATH . '/../lib' ),
       get_include_path(),
     )
   )
@@ -35,49 +37,8 @@ $action = $Request->getAction();
 
 /**
  * @todo Make some validations, if the Controller or Action doesn't exists
- * the front controller should redirect to Not Found page
+ * the front controller should redirect to a Not Found page
  */
 
 $Controller = new $controller();
 $Controller->$action();
-
-/**
- * Include files based on the Instance's ClassName being created
- *
- * Gets Controller from application/controllers/
- * Gets Views from application/views/
- * Gets Models from application/models/
- * Every other class it gets it from application/core/
- *
- * For classes that doesn't form part of the core, you must include the file
- * by hand.
- *
- * @todo Put this function in a separated file.
- */
-function __autoload($class_name)
-{
-    $class_name = ucwords($class_name);
-    
-    /** Application Specific Classes are inside this directories **/
-    $named_directories = array
-    (
-      'Controller' => 'controllers/',
-      'View' => 'views/',
-      'Model' => 'models/',
-    );
-    $is_core = true;
-    foreach ( $named_directories AS $name => $directory ) {
-      if ( stristr($class_name, $name) && $class_name!=$name ){
-          $path = $directory . $class_name;
-          $is_core = false;
-          break;
-      }
-    }
-    /** All other classes are inside the core **/
-    if ($is_core) {
-        $path = 'core/' . $class_name;
-    }
-   
-    /** add the application path and the php extension **/
-    require_once APPLICATION_PATH . '/' . $path . '.php';
-}
