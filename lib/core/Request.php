@@ -89,6 +89,7 @@ class Request {
      * count 1
      */
     
+    //Logger::log('elements', print_r($elements,1));
     switch ( count($elements) ) {
       case 3:
         $this->__controller = ucfirst($elements[0]) . "Controller";
@@ -131,6 +132,10 @@ class Request {
   public function __get($field)
   {
     return $_GET[$field];
+  }
+  
+  public function __isset($field) {
+    return ($_GET[$field]);
   }
   
   public function getController(){

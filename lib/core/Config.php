@@ -85,8 +85,13 @@ class Config {
    * In the first call, it loads the config file
    * @param string $field
    * @return string
+   * @todo Improve error reporting
    */
   public function __get($field) {
+    if ( !isset($this->_config[$field]) ) {
+      Logger::log('Undefined Config used', "$field");
+      return '';
+    }
     return $this->_config[$field];
   }
   
@@ -99,6 +104,7 @@ class Config {
   public function __set($field, $value) {
     $this->_config[$field] = $value;
   }
+  
   
   public function getFilename(){
     return $this->_filename;
