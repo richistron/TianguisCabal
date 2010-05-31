@@ -26,6 +26,7 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="../ric_README.html">README</a></p>
 			</div>
 	<div id="todolist">
@@ -38,28 +39,29 @@
             <br /><br />
                         <b>Files:</b><br />
       	  <div class="package">
-			<a href="../Garson/_application---core---Config.php.html">		Config.php
+			<a href="../Garson/_lib---core---Config.php.html">		Config.php
 		</a><br>
-			<a href="../Garson/_application---core---Controller.php.html">		Controller.php
+			<a href="../Garson/_lib---core---Controller.php.html">		Controller.php
 		</a><br>
-			<a href="../Garson/_application---core---DAO.php.html">		DAO.php
+			<a href="../Garson/_lib---core---DAO.php.html">		DAO.php
 		</a><br>
-			<a href="../Garson/_application---core---DbConnection.php.html">		DbConnection.php
+			<a href="../Garson/_lib---core---DbConnection.php.html">		DbConnection.php
 		</a><br>
 			<a href="../Garson/_public---index.php.html">		index.php
 		</a><br>
-			<a href="../Garson/_application---core---Logger.php.html">		Logger.php
+			<a href="../Garson/_lib---core---Logger.php.html">		Logger.php
 		</a><br>
-			<a href="../Garson/_application---core---Request.php.html">		Request.php
+			<a href="../Garson/_lib---core---Request.php.html">		Request.php
 		</a><br>
-			<a href="../Garson/_application---core---View.php.html">		View.php
+			<a href="../Garson/_lib---core---View.php.html">		View.php
 		</a><br>
 	  </div><br />
       
       
             <b>Classes:</b><br />
         <div class="package">
-		    		<a href="../Garson/Config.html">Config</a><br />
+		    		<a href="../Garson/CategoryController.html">CategoryController</a><br />
+	    		<a href="../Garson/Config.html">Config</a><br />
 	    		<a href="../Garson/Controller.html">Controller</a><br />
 	    		<a href="../Garson/DAO.html">DAO</a><br />
 	    		<a href="../Garson/DbConnection.html">DbConnection</a><br />
@@ -72,7 +74,7 @@
       <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
 
 <h1>Class: DAO</h1>
-Source Location: /application/core/DAO.php<br /><br />
+Source Location: /lib/core/DAO.php<br /><br />
 
 
 <table width="100%" border="0">
@@ -121,6 +123,7 @@ Source Location: /application/core/DAO.php<br /><br />
     <li><a href="../Garson/DAO.html#methodsave">save</a></li>
     <li><a href="../Garson/DAO.html#methodsetIdField">setIdField</a></li>
     <li><a href="../Garson/DAO.html#method__get">__get</a></li>
+    <li><a href="../Garson/DAO.html#method__isset">__isset</a></li>
     <li><a href="../Garson/DAO.html#method__set">__set</a></li>
   </ul>
 </td>
@@ -150,7 +153,7 @@ Source Location: /application/core/DAO.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a15">15</a>]<br />
+[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a15">15</a>]<br />
 Provides a database abstraction of a Row, simplyfing data access and modification<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -170,7 +173,7 @@ Provides a database abstraction of a Row, simplyfing data access and modificatio
 	<a name="var$_assert_message"></a>
 	<p></p>
 	<h4>$_assert_message = <span class="value">&nbsp;&quot;Class&nbsp;Instance&nbsp;isn't&nbsp;Loaded&quot;</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a35">35</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a35">35</a>]</p>
   When the class isn't loaded, an Exception is thrown with this message<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -194,7 +197,7 @@ Provides a database abstraction of a Row, simplyfing data access and modificatio
 	<a name="var$_data"></a>
 	<p></p>
 	<h4>$_data = <span class="value">array()</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a21">21</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a21">21</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -218,7 +221,7 @@ Provides a database abstraction of a Row, simplyfing data access and modificatio
 	<a name="var$_DbConnection"></a>
 	<p></p>
 	<h4>$_DbConnection = <span class="value">&nbsp;null</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a29">29</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a29">29</a>]</p>
   Holds the DbConnection<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -242,7 +245,7 @@ Provides a database abstraction of a Row, simplyfing data access and modificatio
 	<a name="var$_id"></a>
 	<p></p>
 	<h4>$_id = <span class="value">&nbsp;0</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a20">20</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a20">20</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -266,7 +269,7 @@ Provides a database abstraction of a Row, simplyfing data access and modificatio
 	<a name="var$_idField"></a>
 	<p></p>
 	<h4>$_idField = <span class="value">&nbsp;''</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a19">19</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a19">19</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -290,7 +293,7 @@ Provides a database abstraction of a Row, simplyfing data access and modificatio
 	<a name="var$_loaded"></a>
 	<p></p>
 	<h4>$_loaded = <span class="value">&nbsp;false</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a22">22</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a22">22</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -314,7 +317,7 @@ Provides a database abstraction of a Row, simplyfing data access and modificatio
 	<a name="var$_tableName"></a>
 	<p></p>
 	<h4>$_tableName = <span class="value">&nbsp;''</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a18">18</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a18">18</a>]</p>
   <br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -344,7 +347,7 @@ Provides a database abstraction of a Row, simplyfing data access and modificatio
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a43">43</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a43">43</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -398,7 +401,7 @@ $table_name)</code>
   </div>
   <hr />
 	<a name="methodassertLoaded"></a>
-	<h3>method assertLoaded <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a203">203</a>]</span></h3>
+	<h3>method assertLoaded <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a215">215</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -423,7 +426,7 @@ $table_name)</code>
   </div>
   <hr />
 	<a name="methoddelete"></a>
-	<h3>method delete <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a179">179</a>]</span></h3>
+	<h3>method delete <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a191">191</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -448,7 +451,7 @@ $table_name)</code>
   </div>
   <hr />
 	<a name="methodgetAllData"></a>
-	<h3>method getAllData <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a103">103</a>]</span></h3>
+	<h3>method getAllData <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a112">112</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -473,7 +476,7 @@ $table_name)</code>
   </div>
   <hr />
 	<a name="methodgetId"></a>
-	<h3>method getId <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a117">117</a>]</span></h3>
+	<h3>method getId <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a126">126</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -498,7 +501,7 @@ $table_name)</code>
   </div>
   <hr />
 	<a name="methodgetStructure"></a>
-	<h3>method getStructure <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a112">112</a>]</span></h3>
+	<h3>method getStructure <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a121">121</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -523,7 +526,7 @@ $table_name)</code>
   </div>
   <hr />
 	<a name="methodisLoaded"></a>
-	<h3>method isLoaded <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a194">194</a>]</span></h3>
+	<h3>method isLoaded <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a206">206</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -548,7 +551,7 @@ $table_name)</code>
   </div>
   <hr />
 	<a name="methodload"></a>
-	<h3>method load <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a63">63</a>]</span></h3>
+	<h3>method load <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a63">63</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -573,7 +576,7 @@ $table_name)</code>
   </div>
   <hr />
 	<a name="methodsave"></a>
-	<h3>method save <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a130">130</a>]</span></h3>
+	<h3>method save <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a139">139</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -598,7 +601,7 @@ $table_name)</code>
   </div>
   <hr />
 	<a name="methodsetIdField"></a>
-	<h3>method setIdField <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a121">121</a>]</span></h3>
+	<h3>method setIdField <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a130">130</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -634,7 +637,7 @@ $field)</code>
   </div>
   <hr />
 	<a name="method__get"></a>
-	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a94">94</a>]</span></h3>
+	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a94">94</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -669,8 +672,44 @@ $field)</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="method__isset"></a>
+	<h3>method __isset <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a104">104</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean __isset(
+string
+$field)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Checks if the given index is setted<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$field</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="method__set"></a>
-	<h3>method __set <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreDAO.php.html#a84">84</a>]</span></h3>
+	<h3>method __set <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreDAO.php.html#a84">84</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -715,7 +754,7 @@ $value)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sat, 29 May 2010 16:02:44 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 31 May 2010 14:58:23 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

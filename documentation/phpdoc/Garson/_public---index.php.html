@@ -26,6 +26,7 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="../ric_README.html">README</a></p>
 			</div>
 	<div id="todolist">
@@ -38,28 +39,29 @@
             <br /><br />
                         <b>Files:</b><br />
       	  <div class="package">
-			<a href="../Garson/_application---core---Config.php.html">		Config.php
+			<a href="../Garson/_lib---core---Config.php.html">		Config.php
 		</a><br>
-			<a href="../Garson/_application---core---Controller.php.html">		Controller.php
+			<a href="../Garson/_lib---core---Controller.php.html">		Controller.php
 		</a><br>
-			<a href="../Garson/_application---core---DAO.php.html">		DAO.php
+			<a href="../Garson/_lib---core---DAO.php.html">		DAO.php
 		</a><br>
-			<a href="../Garson/_application---core---DbConnection.php.html">		DbConnection.php
+			<a href="../Garson/_lib---core---DbConnection.php.html">		DbConnection.php
 		</a><br>
 			<a href="../Garson/_public---index.php.html">		index.php
 		</a><br>
-			<a href="../Garson/_application---core---Logger.php.html">		Logger.php
+			<a href="../Garson/_lib---core---Logger.php.html">		Logger.php
 		</a><br>
-			<a href="../Garson/_application---core---Request.php.html">		Request.php
+			<a href="../Garson/_lib---core---Request.php.html">		Request.php
 		</a><br>
-			<a href="../Garson/_application---core---View.php.html">		View.php
+			<a href="../Garson/_lib---core---View.php.html">		View.php
 		</a><br>
 	  </div><br />
       
       
             <b>Classes:</b><br />
         <div class="package">
-		    		<a href="../Garson/Config.html">Config</a><br />
+		    		<a href="../Garson/CategoryController.html">CategoryController</a><br />
+	    		<a href="../Garson/Config.html">Config</a><br />
 	    		<a href="../Garson/Controller.html">Controller</a><br />
 	    		<a href="../Garson/DAO.html">DAO</a><br />
 	    		<a href="../Garson/DbConnection.html">DbConnection</a><br />
@@ -89,11 +91,15 @@ Front Controller<br /><br /><br /><br />
 </table>
 </div>
 <br /><br />
+<h4>Includes:</h4>
+<div class="tags">
+include(<a href="../TianguisCabal/_lib---autoload.php.html">"../lib/autoload.php"</a>) [line <a href="../__filesource/fsource_Garson__publicindex.php.html#a8">8</a>]<br />
+</div>
 <br /><br />
 <br /><br />
   <hr />
 	<a name="defineAPPLICATION_PATH"></a>
-	<h3>APPLICATION_PATH <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__publicindex.php.html#a12">12</a>]</span></h3>
+	<h3>APPLICATION_PATH <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__publicindex.php.html#a15">15</a>]</span></h3>
 	<div class="tags">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -106,7 +112,7 @@ Front Controller<br /><br /><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
   <hr />
 	<a name="defineBASE_URL"></a>
-	<h3>BASE_URL <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__publicindex.php.html#a19">19</a>]</span></h3>
+	<h3>BASE_URL <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__publicindex.php.html#a22">22</a>]</span></h3>
 	<div class="tags">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -118,42 +124,10 @@ Front Controller<br /><br /><br /><br />
 		</div>
 	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
 <br />
-  <hr />
-	<a name="function__autoload"></a>
-	<h3>__autoload <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__publicindex.php.html#a57">57</a>]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void __autoload(
- $class_name)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-
-		Include files based on the Instance's ClassName being created<br /><br /><p>Gets Controller from application/controllers/  Gets Views from application/views/  Gets Models from application/models/  Every other class it gets it from application/core/</p><p>For classes that doesn't form part of the core, you must include the file  by hand.</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>todo:</b>&nbsp;&nbsp;</td><td>Put this function in a separated file.</td>
-  </tr>
-</table>
-</div>
-    <br /><br />
-	
-    		<h4>Parameters</h4>
-    <table border="0" cellspacing="0" cellpadding="0">
-		      <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$class_name</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-				</table>
-    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
-	</div>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sat, 29 May 2010 16:02:44 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 31 May 2010 14:58:24 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

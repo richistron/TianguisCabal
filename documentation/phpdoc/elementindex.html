@@ -23,6 +23,7 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
+					<p><a href="ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="ric_README.html">README</a></p>
 			</div>
 	<div id="todolist">
@@ -67,6 +68,8 @@
 				<dd>in file DAO.php, method <a href="Garson/DAO.html#methodassertLoaded">DAO::assertLoaded()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Asserts that the DataAccessObject is Loaded</dd>
 							<dt><b>assign</b></dt>
 				<dd>in file View.php, method <a href="Garson/View.html#methodassign">View::assign()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Assigns a variable to be visible in the Template</dd>
+							<dt><b>autoload.php</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_lib---autoload.php.html">autoload.php</a></dd>
 					</dl>
 	</div>
 	<a href="elementindex.html#top">top</a><br>
@@ -85,22 +88,30 @@
 	<div>
 		<h2>c</h2>
 		<dl>
-							<dt><b>Config.php</b></dt>
-				<dd>procedural page <a href="Garson/_application---core---Config.php.html">Config.php</a></dd>
-							<dt><b>Controller.php</b></dt>
-				<dd>procedural page <a href="Garson/_application---core---Controller.php.html">Controller.php</a></dd>
+							<dt><b>CategoryController.php</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_application---controllers---CategoryController.php.html">CategoryController.php</a></dd>
+							<dt><b>ConceptController.php</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_application---controllers---ConceptController.php.html">ConceptController.php</a></dd>
 							<dt><b>CategoryModel.php</b></dt>
 				<dd>procedural page <a href="TianguisCabal/_application---models---CategoryModel.php.html">CategoryModel.php</a></dd>
 							<dt><b>credits.phtml</b></dt>
-				<dd>procedural page <a href="TianguisCabal/_application---views---index---credits.phtml.html">credits.phtml</a></dd>
+				<dd>procedural page <a href="TianguisCabal/_application---views---concept---credits.phtml.html">credits.phtml</a></dd>
+							<dt><b>CategoryController</b></dt>
+				<dd>in file CategoryController.php, class <a href="Garson/CategoryController.html">CategoryController</a></dd>
 							<dt><b>CategoryModel</b></dt>
 				<dd>in file CategoryModel.php, class <a href="TianguisCabal/CategoryModel.html">CategoryModel</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Extends DAO to provide Category Specific functionality</dd>
+							<dt><b>ConceptController</b></dt>
+				<dd>in file ConceptController.php, class <a href="TianguisCabal/ConceptController.html">ConceptController</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Presentation Concept for the FrameWork</dd>
 							<dt><b>Config</b></dt>
 				<dd>in file Config.php, class <a href="Garson/Config.html">Config</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Provides a Config abstraction in the form of a singleton</dd>
 							<dt><b>ConfigTest</b></dt>
 				<dd>in file ConfigTest.php, class <a href="GarsonTests/ConfigTest.html">ConfigTest</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test Suite for <a href="Garson/Config.html">Config</a></dd>
 							<dt><b>Controller</b></dt>
 				<dd>in file Controller.php, class <a href="Garson/Controller.html">Controller</a></dd>
+							<dt><b>Config.php</b></dt>
+				<dd>procedural page <a href="Garson/_lib---core---Config.php.html">Config.php</a></dd>
+							<dt><b>Controller.php</b></dt>
+				<dd>procedural page <a href="Garson/_lib---core---Controller.php.html">Controller.php</a></dd>
 							<dt><b>ConfigTest.php</b></dt>
 				<dd>procedural page <a href="GarsonTests/_tests---ConfigTest.php.html">ConfigTest.php</a></dd>
 					</dl>
@@ -111,24 +122,26 @@
 	<div>
 		<h2>d</h2>
 		<dl>
-							<dt><b>DAO.php</b></dt>
-				<dd>procedural page <a href="Garson/_application---core---DAO.php.html">DAO.php</a></dd>
-							<dt><b>DbConnection.php</b></dt>
-				<dd>procedural page <a href="Garson/_application---core---DbConnection.php.html">DbConnection.php</a></dd>
 							<dt><b>default.phtml</b></dt>
 				<dd>procedural page <a href="TianguisCabal/_application---layouts---default.phtml.html">default.phtml</a></dd>
 							<dt><b>diagram.phtml</b></dt>
-				<dd>procedural page <a href="TianguisCabal/_application---views---index---diagram.phtml.html">diagram.phtml</a></dd>
+				<dd>procedural page <a href="TianguisCabal/_application---views---concept---diagram.phtml.html">diagram.phtml</a></dd>
 							<dt><b>diagram_simplified.phtml</b></dt>
-				<dd>procedural page <a href="TianguisCabal/_application---views---index---diagram_simplified.phtml.html">diagram_simplified.phtml</a></dd>
+				<dd>procedural page <a href="TianguisCabal/_application---views---concept---diagram_simplified.phtml.html">diagram_simplified.phtml</a></dd>
 							<dt><b>DAO</b></dt>
 				<dd>in file DAO.php, class <a href="Garson/DAO.html">DAO</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Provides a database abstraction of a Row, simplyfing data access and modification</dd>
 							<dt><b>DbConnection</b></dt>
 				<dd>in file DbConnection.php, class <a href="Garson/DbConnection.html">DbConnection</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Database Connection abstraction</dd>
 							<dt><b>delete</b></dt>
 				<dd>in file DAO.php, method <a href="Garson/DAO.html#methoddelete">DAO::delete()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Deletes the row on the database, if it violates referential-integrity as  defined at database level it will simply return false constraints.</dd>
+							<dt><b>deleteAction</b></dt>
+				<dd>in file CategoryController.php, method <a href="Garson/CategoryController.html#methoddeleteAction">CategoryController::deleteAction()</a></dd>
 							<dt><b>display</b></dt>
 				<dd>in file View.php, method <a href="Garson/View.html#methoddisplay">View::display()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Displays the Template</dd>
+							<dt><b>DAO.php</b></dt>
+				<dd>procedural page <a href="Garson/_lib---core---DAO.php.html">DAO.php</a></dd>
+							<dt><b>DbConnection.php</b></dt>
+				<dd>procedural page <a href="Garson/_lib---core---DbConnection.php.html">DbConnection.php</a></dd>
 					</dl>
 	</div>
 	<a href="elementindex.html#top">top</a><br>
@@ -137,6 +150,14 @@
 	<div>
 		<h2>e</h2>
 		<dl>
+							<dt><b>ExamplesController.php</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_application---controllers---ExamplesController.php.html">ExamplesController.php</a></dd>
+							<dt><b>edit.phtml</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_application---views---category---edit.phtml.html">edit.phtml</a></dd>
+							<dt><b>editAction</b></dt>
+				<dd>in file CategoryController.php, method <a href="Garson/CategoryController.html#methodeditAction">CategoryController::editAction()</a></dd>
+							<dt><b>ExamplesController</b></dt>
+				<dd>in file ExamplesController.php, class <a href="TianguisCabal/ExamplesController.html">ExamplesController</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Use Examples</dd>
 							<dt><b>execute</b></dt>
 				<dd>in file DbConnection.php, method <a href="Garson/DbConnection.html#methodexecute">DbConnection::execute()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Executes a query directly</dd>
 					</dl>
@@ -198,11 +219,19 @@
 							<dt><b>IndexController.php</b></dt>
 				<dd>procedural page <a href="TianguisCabal/_application---controllers---IndexController.php.html">IndexController.php</a></dd>
 							<dt><b>index.phtml</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_application---views---concept---index.phtml.html">index.phtml</a></dd>
+							<dt><b>index.phtml</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_application---views---examples---index.phtml.html">index.phtml</a></dd>
+							<dt><b>index.phtml</b></dt>
 				<dd>procedural page <a href="TianguisCabal/_application---views---index---index.phtml.html">index.phtml</a></dd>
-							<dt><b>intro.phtml</b></dt>
-				<dd>procedural page <a href="TianguisCabal/_application---views---index---intro.phtml.html">intro.phtml</a></dd>
+							<dt><b>indexAction</b></dt>
+				<dd>in file ConceptController.php, method <a href="TianguisCabal/ConceptController.html#methodindexAction">ConceptController::indexAction()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;multiple page thingy</dd>
 							<dt><b>indexAction</b></dt>
 				<dd>in file IndexController.php, method <a href="TianguisCabal/IndexController.html#methodindexAction">IndexController::indexAction()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Hello World Example</dd>
+							<dt><b>indexAction</b></dt>
+				<dd>in file CategoryController.php, method <a href="Garson/CategoryController.html#methodindexAction">CategoryController::indexAction()</a></dd>
+							<dt><b>indexAction</b></dt>
+				<dd>in file ExamplesController.php, method <a href="TianguisCabal/ExamplesController.html#methodindexAction">ExamplesController::indexAction()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Hello World Example</dd>
 							<dt><b>IndexController</b></dt>
 				<dd>in file IndexController.php, class <a href="TianguisCabal/IndexController.html">IndexController</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Main Controller, the one that gets shown when you don't send any parameter</dd>
 							<dt><b>isLoaded</b></dt>
@@ -221,12 +250,12 @@
 		<dl>
 							<dt><b>$logs</b></dt>
 				<dd>in file Logger.php, variable <a href="Garson/Logger.html#var$logs">Logger::$logs</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Holds the logs of the session</dd>
-							<dt><b>Logger.php</b></dt>
-				<dd>procedural page <a href="Garson/_application---core---Logger.php.html">Logger.php</a></dd>
+							<dt><b>list.phtml</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_application---views---category---list.phtml.html">list.phtml</a></dd>
 							<dt><b>layer.phtml</b></dt>
-				<dd>procedural page <a href="TianguisCabal/_application---views---index---layer.phtml.html">layer.phtml</a></dd>
-							<dt><b>layers.phtml</b></dt>
-				<dd>procedural page <a href="TianguisCabal/_application---views---index---layers.phtml.html">layers.phtml</a></dd>
+				<dd>procedural page <a href="TianguisCabal/_application---views---concept---layer.phtml.html">layer.phtml</a></dd>
+							<dt><b>Logger.php</b></dt>
+				<dd>procedural page <a href="Garson/_lib---core---Logger.php.html">Logger.php</a></dd>
 							<dt><b>load</b></dt>
 				<dd>in file DAO.php, method <a href="Garson/DAO.html#methodload">DAO::load()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Loads the data from the database, remember to load before do anything.</dd>
 							<dt><b>log</b></dt>
@@ -241,12 +270,14 @@
 	<div>
 		<h2>m</h2>
 		<dl>
-							<dt><b>message.phtml</b></dt>
-				<dd>procedural page <a href="TianguisCabal/_application---views---index---message.phtml.html">message.phtml</a></dd>
 							<dt><b>mvc.phtml</b></dt>
-				<dd>procedural page <a href="TianguisCabal/_application---views---index---mvc.phtml.html">mvc.phtml</a></dd>
+				<dd>procedural page <a href="TianguisCabal/_application---views---concept---mvc.phtml.html">mvc.phtml</a></dd>
+							<dt><b>message.phtml</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_application---views---examples---message.phtml.html">message.phtml</a></dd>
 							<dt><b>messageAction</b></dt>
 				<dd>in file IndexController.php, method <a href="TianguisCabal/IndexController.html#methodmessageAction">IndexController::messageAction()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Messages Example</dd>
+							<dt><b>messageAction</b></dt>
+				<dd>in file ExamplesController.php, method <a href="TianguisCabal/ExamplesController.html#methodmessageAction">ExamplesController::messageAction()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Messages Example</dd>
 							<dt><b>multipageAction</b></dt>
 				<dd>in file IndexController.php, method <a href="TianguisCabal/IndexController.html#methodmultipageAction">IndexController::multipageAction()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;multiple page thingy</dd>
 					</dl>
@@ -258,7 +289,7 @@
 		<h2>r</h2>
 		<dl>
 							<dt><b>Request.php</b></dt>
-				<dd>procedural page <a href="Garson/_application---core---Request.php.html">Request.php</a></dd>
+				<dd>procedural page <a href="Garson/_lib---core---Request.php.html">Request.php</a></dd>
 							<dt><b>Request</b></dt>
 				<dd>in file Request.php, class <a href="Garson/Request.html">Request</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Class that handle Request related things, with a little effort can be used to  create from zero and re-create from current request.</dd>
 					</dl>
@@ -270,9 +301,11 @@
 		<h2>s</h2>
 		<dl>
 							<dt><b>save</b></dt>
-				<dd>in file DAO.php, method <a href="Garson/DAO.html#methodsave">DAO::save()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Saves the data into the database, checking whether is a new row or an old</dd>
-							<dt><b>save</b></dt>
 				<dd>in file Config.php, method <a href="Garson/Config.html#methodsave">Config::save()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Saves the config from the array file into an inifile</dd>
+							<dt><b>save</b></dt>
+				<dd>in file DAO.php, method <a href="Garson/DAO.html#methodsave">DAO::save()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Saves the data into the database, checking whether is a new row or an old</dd>
+							<dt><b>saveAction</b></dt>
+				<dd>in file CategoryController.php, method <a href="Garson/CategoryController.html#methodsaveAction">CategoryController::saveAction()</a></dd>
 							<dt><b>setIdField</b></dt>
 				<dd>in file DAO.php, method <a href="Garson/DAO.html#methodsetIdField">DAO::setIdField()</a></dd>
 							<dt><b>setLayout</b></dt>
@@ -301,10 +334,14 @@
 	<div>
 		<h2>v</h2>
 		<dl>
+							<dt><b>view.phtml</b></dt>
+				<dd>procedural page <a href="TianguisCabal/_application---views---category---view.phtml.html">view.phtml</a></dd>
 							<dt><b>View.php</b></dt>
-				<dd>procedural page <a href="Garson/_application---core---View.php.html">View.php</a></dd>
+				<dd>procedural page <a href="Garson/_lib---core---View.php.html">View.php</a></dd>
 							<dt><b>View</b></dt>
 				<dd>in file View.php, class <a href="Garson/View.html">View</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="Garson/View.html">View</a> Class, all custom classes are made from this one</dd>
+							<dt><b>viewAction</b></dt>
+				<dd>in file CategoryController.php, method <a href="Garson/CategoryController.html#methodviewAction">CategoryController::viewAction()</a></dd>
 					</dl>
 	</div>
 	<a href="elementindex.html#top">top</a><br>
@@ -358,29 +395,33 @@
 							<dt><b>$__request_uri</b></dt>
 				<dd>in file Request.php, variable <a href="Garson/Request.html#var$__request_uri">Request::$__request_uri</a><br>&nbsp;&nbsp;&nbsp;&nbsp;The full request_uri, after striping the BASE_URL</dd>
 							<dt><b>__autoload</b></dt>
-				<dd>in file index.php, function <a href="Garson/_public---index.php.html#function__autoload">__autoload()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Include files based on the Instance's ClassName being created</dd>
+				<dd>in file autoload.php, function <a href="TianguisCabal/_lib---autoload.php.html#function__autoload">__autoload()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Include files based on the Instance's ClassName being created</dd>
 							<dt><b>__construct</b></dt>
 				<dd>in file Request.php, method <a href="Garson/Request.html#method__construct">Request::__construct()</a></dd>
 							<dt><b>__construct</b></dt>
-				<dd>in file DbConnection.php, method <a href="Garson/DbConnection.html#method__construct">DbConnection::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Protected constructor</dd>
+				<dd>in file Logger.php, method <a href="Garson/Logger.html#method__construct">Logger::__construct()</a></dd>
 							<dt><b>__construct</b></dt>
-				<dd>in file CategoryModel.php, method <a href="TianguisCabal/CategoryModel.html#method__construct">CategoryModel::__construct()</a></dd>
+				<dd>in file Config.php, method <a href="Garson/Config.html#method__construct">Config::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor is private so it can't be instantiated</dd>
 							<dt><b>__construct</b></dt>
 				<dd>in file DAO.php, method <a href="Garson/DAO.html#method__construct">DAO::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Creates DataAccessObject Instance</dd>
 							<dt><b>__construct</b></dt>
 				<dd>in file View.php, method <a href="Garson/View.html#method__construct">View::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor for class <a href="Garson/View.html">View</a></dd>
 							<dt><b>__construct</b></dt>
-				<dd>in file Config.php, method <a href="Garson/Config.html#method__construct">Config::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor is private so it can't be instantiated</dd>
-							<dt><b>__construct</b></dt>
 				<dd>in file Controller.php, method <a href="Garson/Controller.html#method__construct">Controller::__construct()</a></dd>
 							<dt><b>__construct</b></dt>
-				<dd>in file Logger.php, method <a href="Garson/Logger.html#method__construct">Logger::__construct()</a></dd>
-							<dt><b>__get</b></dt>
-				<dd>in file DAO.php, method <a href="Garson/DAO.html#method__get">DAO::__get()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Getter</dd>
+				<dd>in file DbConnection.php, method <a href="Garson/DbConnection.html#method__construct">DbConnection::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Protected constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file CategoryModel.php, method <a href="TianguisCabal/CategoryModel.html#method__construct">CategoryModel::__construct()</a></dd>
 							<dt><b>__get</b></dt>
 				<dd>in file Request.php, method <a href="Garson/Request.html#method__get">Request::__get()</a></dd>
 							<dt><b>__get</b></dt>
+				<dd>in file DAO.php, method <a href="Garson/DAO.html#method__get">DAO::__get()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Getter</dd>
+							<dt><b>__get</b></dt>
 				<dd>in file Config.php, method <a href="Garson/Config.html#method__get">Config::__get()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get a single value from the config</dd>
+							<dt><b>__isset</b></dt>
+				<dd>in file Request.php, method <a href="Garson/Request.html#method__isset">Request::__isset()</a></dd>
+							<dt><b>__isset</b></dt>
+				<dd>in file DAO.php, method <a href="Garson/DAO.html#method__isset">DAO::__isset()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Checks if the given index is setted</dd>
 							<dt><b>__set</b></dt>
 				<dd>in file DAO.php, method <a href="Garson/DAO.html#method__set">DAO::__set()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Setter</dd>
 							<dt><b>__set</b></dt>
@@ -390,7 +431,7 @@
 	<a href="elementindex.html#top">top</a><br>
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sat, 29 May 2010 16:02:41 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 31 May 2010 14:58:19 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

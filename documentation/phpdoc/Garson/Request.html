@@ -26,6 +26,7 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="../ric_README.html">README</a></p>
 			</div>
 	<div id="todolist">
@@ -38,28 +39,29 @@
             <br /><br />
                         <b>Files:</b><br />
       	  <div class="package">
-			<a href="../Garson/_application---core---Config.php.html">		Config.php
+			<a href="../Garson/_lib---core---Config.php.html">		Config.php
 		</a><br>
-			<a href="../Garson/_application---core---Controller.php.html">		Controller.php
+			<a href="../Garson/_lib---core---Controller.php.html">		Controller.php
 		</a><br>
-			<a href="../Garson/_application---core---DAO.php.html">		DAO.php
+			<a href="../Garson/_lib---core---DAO.php.html">		DAO.php
 		</a><br>
-			<a href="../Garson/_application---core---DbConnection.php.html">		DbConnection.php
+			<a href="../Garson/_lib---core---DbConnection.php.html">		DbConnection.php
 		</a><br>
 			<a href="../Garson/_public---index.php.html">		index.php
 		</a><br>
-			<a href="../Garson/_application---core---Logger.php.html">		Logger.php
+			<a href="../Garson/_lib---core---Logger.php.html">		Logger.php
 		</a><br>
-			<a href="../Garson/_application---core---Request.php.html">		Request.php
+			<a href="../Garson/_lib---core---Request.php.html">		Request.php
 		</a><br>
-			<a href="../Garson/_application---core---View.php.html">		View.php
+			<a href="../Garson/_lib---core---View.php.html">		View.php
 		</a><br>
 	  </div><br />
       
       
             <b>Classes:</b><br />
         <div class="package">
-		    		<a href="../Garson/Config.html">Config</a><br />
+		    		<a href="../Garson/CategoryController.html">CategoryController</a><br />
+	    		<a href="../Garson/Config.html">Config</a><br />
 	    		<a href="../Garson/Controller.html">Controller</a><br />
 	    		<a href="../Garson/DAO.html">DAO</a><br />
 	    		<a href="../Garson/DbConnection.html">DbConnection</a><br />
@@ -72,7 +74,7 @@
       <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
 
 <h1>Class: Request</h1>
-Source Location: /application/core/Request.php<br /><br />
+Source Location: /lib/core/Request.php<br /><br />
 
 
 <table width="100%" border="0">
@@ -116,6 +118,7 @@ Source Location: /application/core/Request.php<br /><br />
     <li><a href="../Garson/Request.html#methodgetParams">getParams</a></li>
     <li><a href="../Garson/Request.html#methodgetRequestUri">getRequestUri</a></li>
     <li><a href="../Garson/Request.html#method__get">__get</a></li>
+    <li><a href="../Garson/Request.html#method__isset">__isset</a></li>
   </ul>
 </td>
 
@@ -135,7 +138,7 @@ Source Location: /application/core/Request.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a9">9</a>]<br />
+[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a9">9</a>]<br />
 Class that handle Request related things, with a little effort can be used to  create from zero and re-create from current request.<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -155,7 +158,7 @@ Class that handle Request related things, with a little effort can be used to  c
 	<a name="var$__instance"></a>
 	<p></p>
 	<h4>static $__instance = <span class="value">&nbsp;null</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a14">14</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a14">14</a>]</p>
   Singleton instance<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -179,7 +182,7 @@ Class that handle Request related things, with a little effort can be used to  c
 	<a name="var$__action"></a>
 	<p></p>
 	<h4>$__action = <span class="value">&nbsp;'indexAction'</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a26">26</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a26">26</a>]</p>
   Action that this request is asking<br /><br /><p>Defaults to IndexAction</p><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -203,7 +206,7 @@ Class that handle Request related things, with a little effort can be used to  c
 	<a name="var$__controller"></a>
 	<p></p>
 	<h4>$__controller = <span class="value">&nbsp;'IndexController'</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a20">20</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a20">20</a>]</p>
   Controller that this request is asking<br /><br /><p>Defaults to <a href="../TianguisCabal/IndexController.html">IndexController</a></p><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -227,7 +230,7 @@ Class that handle Request related things, with a little effort can be used to  c
 	<a name="var$__parameters"></a>
 	<p></p>
 	<h4>$__parameters = <span class="value">&nbsp;''</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a32">32</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a32">32</a>]</p>
   The last section of the uri<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -251,7 +254,7 @@ Class that handle Request related things, with a little effort can be used to  c
 	<a name="var$__request_uri"></a>
 	<p></p>
 	<h4>$__request_uri = <span class="value">&nbsp;''</span></h4>
-	<p>[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a37">37</a>]</p>
+	<p>[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a37">37</a>]</p>
   The full request_uri, after striping the BASE_URL<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -280,7 +283,7 @@ Class that handle Request related things, with a little effort can be used to  c
 <div class="tags">
   <hr />
 	<a name="methodgetInstance"></a>
-	<h3>static method getInstance <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a118">118</a>]</span></h3>
+	<h3>static method getInstance <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a121">121</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -306,7 +309,7 @@ Class that handle Request related things, with a little effort can be used to  c
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a39">39</a>]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a39">39</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -331,7 +334,7 @@ Class that handle Request related things, with a little effort can be used to  c
   </div>
   <hr />
 	<a name="methodgetAction"></a>
-	<h3>method getAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a138">138</a>]</span></h3>
+	<h3>method getAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a145">145</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -356,7 +359,7 @@ Class that handle Request related things, with a little effort can be used to  c
   </div>
   <hr />
 	<a name="methodgetController"></a>
-	<h3>method getController <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a134">134</a>]</span></h3>
+	<h3>method getController <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a141">141</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -381,7 +384,7 @@ Class that handle Request related things, with a little effort can be used to  c
   </div>
   <hr />
 	<a name="methodgetParams"></a>
-	<h3>method getParams <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a125">125</a>]</span></h3>
+	<h3>method getParams <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a128">128</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -406,7 +409,7 @@ Class that handle Request related things, with a little effort can be used to  c
   </div>
   <hr />
 	<a name="methodgetRequestUri"></a>
-	<h3>method getRequestUri <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a142">142</a>]</span></h3>
+	<h3>method getRequestUri <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a149">149</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -431,11 +434,47 @@ Class that handle Request related things, with a little effort can be used to  c
   </div>
   <hr />
 	<a name="method__get"></a>
-	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__applicationcoreRequest.php.html#a129">129</a>]</span></h3>
+	<h3>method __get <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a132">132</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>void __get(
+
+$field)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$field</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__isset"></a>
+	<h3>method __isset <span class="smalllinenumber">[line <a href="../__filesource/fsource_Garson__libcoreRequest.php.html#a137">137</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __isset(
 
 $field)</code>
     </td></tr></table>
@@ -470,7 +509,7 @@ $field)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sat, 29 May 2010 16:02:45 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 31 May 2010 14:58:25 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
