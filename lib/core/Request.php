@@ -135,7 +135,7 @@ class Request {
   }
   
   public function __isset($field) {
-    return ($_GET[$field]);
+    return isset($_GET[$field]);
   }
   
   public function getController(){
