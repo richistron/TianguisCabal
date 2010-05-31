@@ -26,6 +26,7 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="../ric_README.html">README</a></p>
 			</div>
 	<div id="todolist">
@@ -42,37 +43,39 @@
 		</a><br>
 			<a href="../TianguisCabal/_application---models---CategoryModel.php.html">		CategoryModel.php
 		</a><br>
-			<a href="../TianguisCabal/_application---controllers---Controller.php.html">		Controller.php
+			<a href="../TianguisCabal/_application---controllers---ConceptController.php.html">		ConceptController.php
 		</a><br>
-			<a href="../TianguisCabal/_application---core---Controller.php.html">		Controller.php
+			<a href="../TianguisCabal/_application---views---concept---credits.phtml.html">		credits.phtml
 		</a><br>
 			<a href="../TianguisCabal/_application---layouts---default.phtml.html">		default.phtml
 		</a><br>
-			<a href="../TianguisCabal/_application---layouts---detail.phtml.html">		detail.phtml
+			<a href="../TianguisCabal/_application---views---concept---diagram.phtml.html">		diagram.phtml
 		</a><br>
-			<a href="../TianguisCabal/_application---layouts---footer.phtml.html">		footer.phtml
+			<a href="../TianguisCabal/_application---views---concept---diagram_simplified.phtml.html">		diagram_simplified.phtml
 		</a><br>
-			<a href="../TianguisCabal/_application---layouts---header.phtml.html">		header.phtml
+			<a href="../TianguisCabal/_application---views---category---edit.phtml.html">		edit.phtml
 		</a><br>
-			<a href="../TianguisCabal/_public---index.php.html">		index.php
+			<a href="../TianguisCabal/_application---controllers---ExamplesController.php.html">		ExamplesController.php
+		</a><br>
+			<a href="../TianguisCabal/_application---views---examples---index.phtml.html">		index.phtml
 		</a><br>
 			<a href="../TianguisCabal/_application---views---index---index.phtml.html">		index.phtml
 		</a><br>
-			<a href="../TianguisCabal/_application---layouts---index.phtml.html">		index.phtml
+			<a href="../TianguisCabal/_application---views---concept---index.phtml.html">		index.phtml
 		</a><br>
 			<a href="../TianguisCabal/_application---controllers---IndexController.php.html">		IndexController.php
 		</a><br>
-			<a href="../TianguisCabal/_application---views---IndexView.php.html">		IndexView.php
-		</a><br>
 			<a href="../TianguisCabal/_scripts---install.php.html">		install.php
 		</a><br>
-			<a href="../TianguisCabal/_application---layouts---list.phtml.html">		list.phtml
+			<a href="../TianguisCabal/_application---views---concept---layer.phtml.html">		layer.phtml
 		</a><br>
-			<a href="../TianguisCabal/_application---views---index---message.phtml.html">		message.phtml
+			<a href="../TianguisCabal/_application---views---category---list.phtml.html">		list.phtml
 		</a><br>
-			<a href="../TianguisCabal/_application---core---Request.php.html">		Request.php
+			<a href="../TianguisCabal/_application---views---examples---message.phtml.html">		message.phtml
 		</a><br>
-			<a href="../TianguisCabal/_application---Request.php.html">		Request.php
+			<a href="../TianguisCabal/_application---views---concept---mvc.phtml.html">		mvc.phtml
+		</a><br>
+			<a href="../TianguisCabal/_application---views---category---view.phtml.html">		view.phtml
 		</a><br>
 	  </div><br />
       
@@ -81,10 +84,9 @@
         <div class="package">
 		    		<a href="../TianguisCabal/CategoryController.html">CategoryController</a><br />
 	    		<a href="../TianguisCabal/CategoryModel.html">CategoryModel</a><br />
-	    		<a href="../TianguisCabal/Controller.html">Controller</a><br />
+	    		<a href="../TianguisCabal/ConceptController.html">ConceptController</a><br />
+	    		<a href="../TianguisCabal/ExamplesController.html">ExamplesController</a><br />
 	    		<a href="../TianguisCabal/IndexController.html">IndexController</a><br />
-	    		<a href="../TianguisCabal/IndexView.html">IndexView</a><br />
-	    		<a href="../TianguisCabal/Request.html">Request</a><br />
 	  </div>
                 </td>
     <td>
@@ -98,15 +100,19 @@ Source Location: /application/controllers/CategoryController.php<br /><br />
 <tr><td valign="top">
 
 <h3><a href="#class_details">Class Overview</a></h3>
-<pre><a href="../TianguisCabal/Controller.html">Controller</a>
+<pre><a href="../Garson/Controller.html">Controller</a>
    |
    --CategoryController</pre><br />
-<div class="description">Category Controller</div><br /><br />
+<div class="description">CRUD for Categories</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>Argel Arias &lt;<a href="mailto:levhita@gmail.com">levhita@gmail.com</a>&gt;</li>
+      </ul>
 
 
 
 
-
+    
 
         
 </td>
@@ -116,8 +122,11 @@ Source Location: /application/controllers/CategoryController.php<br /><br />
 <td valign="top">
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
-    <li><a href="../TianguisCabal/CategoryController.html#methoddetailAction">detailAction</a></li>
-    <li><a href="../TianguisCabal/CategoryController.html#methodlistAction">listAction</a></li>
+    <li><a href="../TianguisCabal/CategoryController.html#methoddeleteAction">deleteAction</a></li>
+    <li><a href="../TianguisCabal/CategoryController.html#methodeditAction">editAction</a></li>
+    <li><a href="../TianguisCabal/CategoryController.html#methodindexAction">indexAction</a></li>
+    <li><a href="../TianguisCabal/CategoryController.html#methodsaveAction">saveAction</a></li>
+    <li><a href="../TianguisCabal/CategoryController.html#methodviewAction">viewAction</a></li>
   </ul>
 </td>
 
@@ -132,10 +141,10 @@ Source Location: /application/controllers/CategoryController.php<br /><br />
 <td valign="top">
 <h3>Inherited Variables</h3>
 <div class="tags">
-<h4>Class: <a href="../TianguisCabal/Controller.html">Controller</a></h4>
+<h4>Class: <a href="../Garson/Controller.html">Controller</a></h4>
 <dl>
 <dt>
-  <a href="../TianguisCabal/Controller.html#var$_request">Controller::$_request</a>
+  <a href="../Garson/Controller.html#var$_request">Controller::$_request</a>
   </dt>
 <dd>
    
@@ -147,10 +156,10 @@ Source Location: /application/controllers/CategoryController.php<br /><br />
 <td valign="top">
 <h3>Inherited Methods</h3>
 <div class="tags">
-<h4>Class: <a href="../TianguisCabal/Controller.html">Controller</a></h4>
+<h4>Class: <a href="../Garson/Controller.html">Controller</a></h4>
 <dl>
     <dt>
-    <a href="../TianguisCabal/Controller.html#method__construct">Controller::__construct()</a>
+    <a href="../Garson/Controller.html#method__construct">Controller::__construct()</a>
   </dt>
   <dd>
     
@@ -165,8 +174,17 @@ Source Location: /application/controllers/CategoryController.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line <a href="../__filesource/fsource_TianguisCabal__applicationcontrollersCategoryController.php.html#a6">6</a>]<br />
-Category Controller<br /><br /></div><br /><br />
+[line <a href="../__filesource/fsource_TianguisCabal__applicationcontrollersCategoryController.php.html#a7">7</a>]<br />
+CRUD for Categories<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>Argel Arias &lt;<a href="mailto:levhita@gmail.com">levhita@gmail.com</a>&gt;</td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
 
@@ -176,12 +194,12 @@ Category Controller<br /><br /></div><br /><br />
 <div class="tags">
 
   <hr />
-	<a name="methoddetailAction"></a>
-	<h3>method detailAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationcontrollersCategoryController.php.html#a9">9</a>]</span></h3>
+	<a name="methoddeleteAction"></a>
+	<h3>method deleteAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationcontrollersCategoryController.php.html#a83">83</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void detailAction(
+		<code>void deleteAction(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
@@ -201,12 +219,90 @@ Category Controller<br /><br /></div><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodlistAction"></a>
-	<h3>method listAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationcontrollersCategoryController.php.html#a20">20</a>]</span></h3>
+	<a name="methodeditAction"></a>
+	<h3>method editAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationcontrollersCategoryController.php.html#a40">40</a>]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void listAction(
+		<code>void editAction(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodindexAction"></a>
+	<h3>method indexAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationcontrollersCategoryController.php.html#a9">9</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void indexAction(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsaveAction"></a>
+	<h3>method saveAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationcontrollersCategoryController.php.html#a59">59</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>unknown_type saveAction(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>todo:</b>&nbsp;&nbsp;</td><td>$_POST shouldn't be used, check how this can be integrated with <a href="../Garson/Request.html">Request</a></td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodviewAction"></a>
+	<h3>method viewAction <span class="smalllinenumber">[line <a href="../__filesource/fsource_TianguisCabal__applicationcontrollersCategoryController.php.html#a20">20</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void viewAction(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
@@ -230,7 +326,7 @@ Category Controller<br /><br /></div><br /><br />
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Tue, 25 May 2010 00:32:02 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 31 May 2010 15:11:39 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

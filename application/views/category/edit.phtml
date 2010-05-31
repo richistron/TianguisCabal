@@ -1,3 +1,5 @@
+<?php /**@todo Checking for isset on each variable is too much burn just to avoid notices, Discuss in class**/?>
+
 <form action="<?php echo BASE_URL?>/category/save" method="POST">
   <label for="CatID">CatID:</label><input type="text" name="CatID" id="CatID"
   value="<?php echo (isset($Category->CatID))?$Category->CatID:'';?>" readonly="readonly"/><br/>

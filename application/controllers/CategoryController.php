@@ -1,4 +1,9 @@
 <?php
+/**
+ * CRUD for Categories
+ * @package TianguisCabal
+ * @author Argel Arias <levhita@gmail.com>
+ */
 class CategoryController extends Controller {
 
   public function indexAction(){
@@ -46,6 +51,11 @@ class CategoryController extends Controller {
     $View->display();
   }
   
+  /**
+   *
+   * @return unknown_type
+   * @todo $_POST shouldn't be used, check how this can be integrated with {@link Request}
+   */
   public function saveAction(){
     $View = new View('category/edit');
     $View->assign('_title_', _('View Category'));

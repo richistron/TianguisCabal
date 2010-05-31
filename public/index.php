@@ -1,9 +1,11 @@
 <?php
-session_start();
 /**
  * Front Controller
  * @package Garson
  */
+
+/** @todo Check if session_start(); must be done everytime **/
+session_start();
 
 include "../lib/autoload.php";
 

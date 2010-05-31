@@ -2,14 +2,15 @@
 /**
  * Include files based on the Instance's ClassName being created
  *
- * Gets Controller from application/controllers/
- * Gets Views from application/views/
- * Gets Models from application/models/
+ * Gets {@link Controller} from application/controllers/
+ * Gets {@link View}s from application/views/
+ * Gets {@link Model}s from application/models/
  * Every other class it gets it from application/core/
  *
  * For classes that doesn't form part of the core, you must include the file
  * by hand.
  *
+ * @package Garson
  */
 function __autoload($class_name)
 {
