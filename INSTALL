@@ -1,0 +1,72 @@
+INSTRUCCIONES
+
+1. Descargar el snapshot más actual de TianguisCabal
+
+    $ git clone https://renich@github.com/PHPCabal/TianguisCabal.git
+
+2. Crear una base de datos y un usuario para ella en MySQL
+
+    $ su -c 'service mysqld start'
+    
+    $ mysql -u root -p 
+    
+    mysql> CREATE DATABASE tianguiscabal;
+    
+    mysql> GRANT ALL PRIVILEGES ON tianguiscabal.* to 'tc_dbuser'@'localhost' IDENTIFIED BY 'somecoolpass';
+    
+    mysql> quit
+
+3. Importar el script de scripts/mysql.sql
+
+    $ mysql -u root -p tianguiscabal < scripts/mysql.sql
+
+4. Copiar el documentation/templates/config.ini.tmpl a application/config.ini y llenarlo adecuadamente
+
+    $ cp documentation/templates/config.ini.tmpl application/config.ini
+    
+    $ gedit application/config.ini
+        ; Database Configuration
+        db_host='localhost'
+        db_user='tc_dbuser'
+        db_password='somecoolpass'
+        db_name='tianguiscabal'
+
+        ; Language configuration
+        default_language = 'es_MX'
+
+        ; Timezone
+        timezone = 'America/Mexico_City'
+
+        ;Loging Settings
+        ;Valid options are text, web, both, none
+        log_level='web'
+        log_file='../tmp/log.csv'
+
+        ;Might relative to document root path (/tianguiscabal), in a server where
+        ;"public" is visible in http://domain/, leave it empty
+        ;used in conjuction with RewriteBase in .htaccess
+        base_url='/tianguiscabal'
+
+5. Copiar el documentation/templates/htaccess.tmpl a public/.htaccess
+
+    $ cp documentation/templates/htaccess.tmpl public/.htaccess
+
+6. Configurar el DocumentRoot para que se muestre en public
+
+    $ su -c 'gedit /etc/httpd/conf/httpd.conf'
+        # Activar VirtualHosts
+        NameVirtualHost *:80
+        
+        # Defalut
+        <VirtualHost *:80>
+            DocumentRoot /var/www/html
+            ServerName mipc.midominio
+            ServerAlias mipc
+        </VirtualHost>
+        
+        # TianguisCabal
+        <VirtualHost *:80>
+            DocumentRoot /path/a/TianguisCabal/public
+            ServerName tianguiscabal.midominio
+            ServerAlias tianguiscabal
+        </VirtualHost>
