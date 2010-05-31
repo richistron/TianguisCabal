@@ -40,8 +40,9 @@ class Logger {
     /* Save it in the instance */
     self::$logs[] = $log;
     
-    if ($Config->log_level == 'none' || $Config->log_level == 'text' ) {
-      // @todo Implement text logger, the filename is in $Config->log_file
+    if ($Config->log_level == 'both' || $Config->log_level == 'text' ) {
+      $file_pointer = fopen($Config->log_file, 'a');
+      fputcsv($file_pointer, $log);
     }
   }
   

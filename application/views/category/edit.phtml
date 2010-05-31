@@ -1,0 +1,13 @@
+<form action="<?php echo BASE_URL?>/category/save" method="POST">
+  <label for="CatID">CatID:</label><input type="text" name="CatID" id="CatID"
+  value="<?php echo (isset($Category->CatID))?$Category->CatID:'';?>" readonly="readonly"/><br/>
+  
+  <label for="Categoria">Categoria:</label><input type="text" name="Categoria" id="Categoria"
+  value="<?php echo (isset($Category->Categoria))?$Category->Categoria:'';?>"/><br/>
+  
+  <input type="button" onclick="window.location.href='<?php echo BASE_URL?>/category'" value="Ver todas"/>
+  <input type="submit" value="<?php echo _('Save') ?>"/>
+  <?php if ( isset($Category->CatID) ) { ?>
+    <input type="button" onclick="window.location.href='<?php echo BASE_URL ?>/category/delete/?id=<?php echo $Category->CatID?>'" value="<?php echo _('Delete') ?>"/>
+  <?php }?>
+</form>

@@ -88,13 +88,19 @@ class View {
     $this->_variables['_title_'] = (empty($this->_variables['_title_']))?$Config->default_title : $this->_variables['_title_'];
     $this->_variables['_language_'] = (empty($this->_variables['_language_']))?$Config->default_language : $this->_variables['_language_'];
     
-    $Vars = (object) $this->_variables;
+    if ( isset($_SESSION['_MESSAGE_']) ) {
+      $_message_ = $_SESSION['_MESSAGE_'];
+      unset($_SESSION['_MESSAGE_']);
+    }
+    
+    /** Put variables in array available as local variables **/
+    extract($this->_variables);
+    
     ob_start();
     include $this->_template;
-    $template_content = ob_get_contents();
+      $_template_content_ = ob_get_contents();
     ob_end_clean();
     
-    $Vars->_template_content_ = $template_content;
     include $this->_layout;
   }
 }

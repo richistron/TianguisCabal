@@ -35,7 +35,7 @@ class DAO
   protected $_assert_message = "Class Instance isn't Loaded";
     
   /**
-   * Creates DataAccessObject Instance 
+   * Creates DataAccessObject Instance
    * @param string $table_name
    * @param string $id
    * @return DataAccessObject
@@ -76,14 +76,14 @@ class DAO
   }
   
   /**
-   * Setter 
+   * Setter
    * @param string $field
    * @param string $value
    * @return NULL
    */
   public function __set($field, $value)
   {
-    $this->_data[$field] = $value;  
+    $this->_data[$field] = $value;
   }
   
   /**
@@ -94,6 +94,15 @@ class DAO
   public function __get($field)
   {
     return $this->_data[$field];
+  }
+  
+  /**
+   * Checks if the given index is setted
+   * @param string $field
+   * @return boolean
+   */
+  public function __isset($field){
+    return isset($this->_data[$field]);
   }
   
   /**
@@ -129,7 +138,7 @@ class DAO
    */
   public function save()
   {
-    if ( !$this->id ) {
+    if ( !$this->_id ) {
       $fields = array_keys($this->_data);
       $fieldsString = implode(', ', $fields);
       
@@ -142,9 +151,12 @@ class DAO
       $values = implode(', ', $aux);
       
       $sql = "INSERT INTO
-              {$this->table_name}($fieldsString)
+              {$this->_tableName}($fieldsString)
               VALUES($values);";
-      if ( !$this->_DbConnection->executeQuery($sql) ) {
+      try{
+        $this->_DbConnection->execute($sql);
+      }catch(RuntimeException $Exception) {
+        Logger::log('Couln\'t save Row', $Exception->getMessage(), 'error');
         return false;
       }
       $this->_id = $this->_DbConnection->getLastId();
@@ -161,7 +173,7 @@ class DAO
               SET $fieldString
               WHERE $this->_idField=$this->_id
               LIMIT 1;";
-      if ( !$this->_DbConnection->executeQuery($sql) ) {
+      if ( !$this->_DbConnection->execute($sql) ) {
         return false;
       }
     }
@@ -173,7 +185,7 @@ class DAO
  
   /**
    * Deletes the row on the database, if it violates referential-integrity as
-   * defined at database level it will simply return false constraints. 
+   * defined at database level it will simply return false constraints.
    * @return boolean
    */
   public function delete()
@@ -181,7 +193,7 @@ class DAO
     $sql = "DELETE FROM $this->_tableName
             WHERE $this->_idField=$this->_id
             LIMIT 1;";
-    if ( !$this->_DbConnection->executeQuery($sql) ) {
+    if ( !$this->_DbConnection->execute($sql) ) {
       return false;
     }
     return true;
