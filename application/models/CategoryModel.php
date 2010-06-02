@@ -7,7 +7,7 @@
 class CategoryModel extends DAO {
   
   public function __construct($id){
-    parent::__construct('categoria', (int)$id);
+    parent::__construct('Categoria', (int)$id);
     parent::setIdField('CatID');
   }
   /**
@@ -16,7 +16,7 @@ class CategoryModel extends DAO {
    */
   public static function getAll()
   {
-    $sql = 'SELECT * FROM categoria';
+    $sql = 'SELECT * FROM Categoria';
     $DbConnection = DbConnection::getInstance();
     return $DbConnection->getAll($sql);
   }
