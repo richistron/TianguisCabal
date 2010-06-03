@@ -1,0 +1,16 @@
+#Default Apache configuration for TianguisCabal Under an Alias in Debian/Ubuntu
+#Copy this file as 001-tianguiscabal to the project root, and then create a symlink to this
+#file in /etc/apache2/sites-enabled, customize as needed, using this as is, should give you
+#a http://localhost/tianguiscabal/ that points directly into tianguiscabal/public
+
+#DO NOT forget to enable mod_rewrite by making a symlink to /etc/apache2/mods-available/rewrite.load in /etc/apache2/mods-enabled
+
+Alias /tianguiscabal /path/to/tianguiscabal/public
+
+<Directory /path/to/tianguiscabal/public>
+	Options Indexes FollowSymLinks MultiViews ExecCGI
+	DirectoryIndex index.php
+	AllowOverride All
+	Order allow,deny
+        Allow from all
+</Directory>
