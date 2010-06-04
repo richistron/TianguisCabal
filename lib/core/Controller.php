@@ -16,4 +16,12 @@ class Controller
   public function __construct(){
     $this->_request = Request::getInstance();
   }
+  
+  public function gotoPage($page, $message='') {
+    if ( !empty($message) ) {
+      $_SESSION['_MESSAGE_'] = _($message);
+    }
+    header('Location: ' . BASE_URL . $page);
+    exit();
+  }
 }
