@@ -15,7 +15,12 @@ timezone = 'America/Mexico_City'
 log_level='web'
 log_file='../tmp/log.csv'
 
-;Might relative to document root path (/tianguiscabal), in a server where
-;"public" is visible in http://domain/, leave it empty
-;used in conjuction with RewriteBase in .htaccess
-base_url='/tianguiscabal'
+;Full browser path to the visible instance of Tianguis Cabal
+base_url='http://localhost/path/to/tianguiscabal'
+
+;In your local config you might need to reconfig this, by example lets say that
+;your local _public_ dir is viewable by: http://localhost/path/to/tianguiscabal/
+;then your rewrite base would be: /path/to/tianguiscabal/
+;in a server where "public" is visible directly in http://domain/, leave this as '/'
+;Must be the same than RewriteBase in .htaccess
+rewrite_base='/path/to/tianguiscabal/'
