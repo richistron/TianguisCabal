@@ -3,4 +3,6 @@ config.ini
 .buildpath
 .settings/
 .htaccess
+001-tianguiscabal
+tianguiscabal.geany
 *~
