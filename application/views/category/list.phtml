@@ -1,0 +1,22 @@
+<p><a href="<?php echo BASE_URL ?>/category/edit/?id=0">Añadir una Categoria</a></p>
+
+<?php if ( !empty($categories) ) { ?>
+<table>
+<tr><th>Categoria</th><th>Acciones</th></tr>
+  <?php
+  foreach ($categories AS $category) {
+    $Category = (object)$category;?>
+    <tr>
+      <td><?php echo $Category->Categoria?> </td>
+      
+      <td>
+        <a href="<?php echo BASE_URL ?>/category/view/?id=<?php echo $Category->CatID ?>">Ver</a> ||
+        <a href="<?php echo BASE_URL ?>/category/edit/?id=<?php echo $Category->CatID ?>">Editar</a>
+      </td>
+    
+    </tr>
+  <?php }?>
+</table>
+<?php } else { ?>
+<p><strong>No hay ninguna Categoria</strong></p>
+<?php }?>

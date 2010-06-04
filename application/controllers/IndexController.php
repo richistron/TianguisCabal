@@ -47,7 +47,7 @@ class IndexController extends controller
     );
     $links = '<p>';
     foreach($pages as $page =>$name ){
-        $links .= "<a href=\"index.php?controller=index&action=multipage&template=$page\">$name</a>  ";
+        $links .= "<a href=\"" . BASE_URL . "/index/multipage/?template=$page\">$name</a>  ";
     }
     $links .="</p>";
     

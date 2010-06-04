@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>File Source for edit.phtml</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">TianguisCabal</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                                                                      		  [ <a href="../classtrees_TianguisCabal.html" class="menu">class tree: TianguisCabal</a> ]
+		  [ <a href="../elementindex_TianguisCabal.html" class="menu">index: TianguisCabal</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
+					<p><a href="../ric_README.html">README</a></p>
+			</div>
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_TianguisCabal.html">TianguisCabal</a><br />
+              <a href="../li_Garson.html">Garson</a><br />
+              <a href="../li_GarsonTests.html">GarsonTests</a><br />
+            <br /><br />
+                  
+      
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1 align="center">Source for file edit.phtml</h1>
+<p>Documentation is available at <a href="../TianguisCabal/_application---views---category---edit.phtml.html">edit.phtml</a></p>
+<div class="src-code">
+<ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php&nbsp;</span><span class="src-comm">/**@todo&nbsp;Checking&nbsp;for&nbsp;isset&nbsp;on&nbsp;each&nbsp;variable&nbsp;is&nbsp;too&nbsp;much&nbsp;burn&nbsp;just&nbsp;to&nbsp;avoid&nbsp;notices,&nbsp;Discuss&nbsp;in&nbsp;class**/</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a3"></a>&lt;form&nbsp;action=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-id"><a href="../Garson/_public---index.php.html#defineBASE_URL">BASE_URL</a></span><span class="src-php">?&gt;</span>/category/save&quot;&nbsp;method=&quot;POST&quot;&gt;</div></li>
+<li><div class="src-line"><a name="a4"></a>&nbsp;&nbsp;&lt;label&nbsp;for=&quot;CatID&quot;&gt;CatID:&lt;/label&gt;&lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;CatID&quot;&nbsp;id=&quot;CatID&quot;</div></li>
+<li><div class="src-line"><a name="a5"></a>&nbsp;&nbsp;value=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$Category</span><span class="src-sym">-&gt;</span><span class="src-id">CatID</span><span class="src-sym">))</span>?<span class="src-var">$Category</span><span class="src-sym">-&gt;</span><span class="src-id">CatID</span>:<span class="src-str">''</span><span class="src-sym">;</span><span class="src-php">?&gt;</span>&quot;&nbsp;readonly=&quot;readonly&quot;/&gt;&lt;br/&gt;</div></li>
+<li><div class="src-line"><a name="a6"></a>&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;&nbsp;&lt;label&nbsp;for=&quot;Categoria&quot;&gt;Categoria:&lt;/label&gt;&lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;Categoria&quot;&nbsp;id=&quot;Categoria&quot;</div></li>
+<li><div class="src-line"><a name="a8"></a>&nbsp;&nbsp;value=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$Category</span><span class="src-sym">-&gt;</span><span class="src-id">Categoria</span><span class="src-sym">))</span>?<span class="src-var">$Category</span><span class="src-sym">-&gt;</span><span class="src-id">Categoria</span>:<span class="src-str">''</span><span class="src-sym">;</span><span class="src-php">?&gt;</span>&quot;/&gt;&lt;br/&gt;</div></li>
+<li><div class="src-line"><a name="a9"></a>&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a10"></a>&nbsp;&nbsp;&lt;input&nbsp;type=&quot;button&quot;&nbsp;onclick=&quot;window.location.href='<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-id"><a href="../Garson/_public---index.php.html#defineBASE_URL">BASE_URL</a></span><span class="src-php">?&gt;</span>/category'&quot;&nbsp;value=&quot;Ver&nbsp;todas&quot;/&gt;</div></li>
+<li><div class="src-line"><a name="a11"></a>&nbsp;&nbsp;&lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<a href="http://www.php.net/_">_</a><span class="src-sym">(</span><span class="src-str">'Save'</span><span class="src-sym">)&nbsp;</span><span class="src-php">?&gt;</span>&quot;/&gt;</div></li>
+<li><div class="src-line"><a name="a12"></a>&nbsp;&nbsp;<span class="src-php">&lt;?php&nbsp;</span><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span>isset<span class="src-sym">(</span><span class="src-var">$Category</span><span class="src-sym">-&gt;</span><span class="src-id">CatID</span><span class="src-sym">)&nbsp;)&nbsp;</span><span class="src-sym">{&nbsp;</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;button&quot;&nbsp;onclick=&quot;window.location.href='<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-id"><a href="../Garson/_public---index.php.html#defineBASE_URL">BASE_URL</a>&nbsp;</span><span class="src-php">?&gt;</span>/category/delete/?id=<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$Category</span><span class="src-sym">-&gt;</span><span class="src-id">CatID</span><span class="src-php">?&gt;</span>'&quot;&nbsp;value=&quot;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<a href="http://www.php.net/_">_</a><span class="src-sym">(</span><span class="src-str">'Delete'</span><span class="src-sym">)&nbsp;</span><span class="src-php">?&gt;</span>&quot;/&gt;</div></li>
+<li><div class="src-line"><a name="a14"></a>&nbsp;&nbsp;<span class="src-php">&lt;?php&nbsp;</span><span class="src-sym">}</span><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&lt;/form&gt;</div></li>
+</ol>
+</div>
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 31 May 2010 15:11:42 -0500 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
