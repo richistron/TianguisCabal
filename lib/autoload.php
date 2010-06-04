@@ -18,9 +18,9 @@ function __autoload($class_name)
     
     /** Application Specific Classes are inside this directories **/
     $named_directories = array (
-      'Controller' => 'controllers/',
-      'View' => 'views/',
-      'Model' => 'models/',
+        'Controller' => 'controllers/',
+        'View' => 'views/',
+        'Model' => 'models/',
     );
 
     $is_core = true;
