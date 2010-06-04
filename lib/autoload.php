@@ -17,22 +17,24 @@ function __autoload($class_name)
     $class_name = ucwords($class_name);
     
     /** Application Specific Classes are inside this directories **/
-    $named_directories = array
-    (
+    $named_directories = array (
       'Controller' => 'controllers/',
       'View' => 'views/',
       'Model' => 'models/',
     );
+
     $is_core = true;
+
     foreach ( $named_directories AS $name => $directory ) {
-      if ( stristr($class_name, $name) && $class_name!=$name ){
-          $path = $directory . $class_name;
-          $is_core = false;
-          break;
-      }
+        if ( stristr( $class_name, $name ) && $class_name != $name ) {
+            $path = $directory . $class_name;
+            $is_core = false;
+            break;
+        }
     }
+
     /** All other classes are inside the core **/
-    if ($is_core) {
+    if ( $is_core ) {
         $path = '../lib/core/' . $class_name;
     }
    
