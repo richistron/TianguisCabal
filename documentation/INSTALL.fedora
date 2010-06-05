@@ -1,8 +1,8 @@
-INSTRUCCIONES
+INSTRUCCIONES PARA LA INSTALACIÓN EN FEDORA 13 o >
 
 1. Descargar el snapshot más actual de TianguisCabal
 
-    $ git clone https://renich@github.com/PHPCabal/TianguisCabal.git
+    $ git clone git://github.com/PHPCabal/TianguisCabal.git
 
 2. Crear una base de datos y un usuario para ella en MySQL
 
@@ -12,7 +12,8 @@ INSTRUCCIONES
     
     mysql> CREATE DATABASE tianguiscabal;
     
-    mysql> GRANT ALL PRIVILEGES ON tianguiscabal.* to 'tc_dbuser'@'localhost' IDENTIFIED BY 'somecoolpass';
+    mysql> GRANT ALL PRIVILEGES ON tianguiscabal.* to 'tc_dbuser'@'localhost'
+           IDENTIFIED BY 'somecoolpass';
     
     mysql> quit
 
@@ -20,7 +21,8 @@ INSTRUCCIONES
 
     $ mysql -u root -p tianguiscabal < scripts/mysql.sql
 
-4. Copiar el documentation/templates/config.ini.tmpl a application/config.ini y llenarlo adecuadamente
+4. Copiar el documentation/templates/config.ini.tmpl a application/config.ini y
+   llenarlo adecuadamente
 
     $ cp documentation/templates/config.ini.tmpl application/config.ini
     
@@ -42,12 +44,13 @@ INSTRUCCIONES
         log_level='web'
         log_file='../tmp/log.csv'
 
-        ;Might relative to document root path (/tianguiscabal), in a server where
-        ;"public" is visible in http://domain/, leave it empty
-        ;used in conjuction with RewriteBase in .htaccess
+        ;Might relative to document root path (/tianguiscabal), in a server 
+        ; where "public" is visible in http://domain/, leave it empty
+        ; used in conjuction with RewriteBase in .htaccess
         base_url='/tianguiscabal'
 
-5. Copiar el documentation/templates/htaccess.tmpl a public/.htaccess
+5. Si usas apache, copiar el documentation/templates/htaccess.tmpl a
+   public/.htaccess
 
     $ cp documentation/templates/htaccess.tmpl public/.htaccess
 
@@ -60,8 +63,8 @@ INSTRUCCIONES
         # Defalut
         <VirtualHost *:80>
             DocumentRoot /var/www/html
-            ServerName mipc.midominio
-            ServerAlias mipc
+            ServerName localhost.localdomain
+            ServerAlias localhost
         </VirtualHost>
         
         # TianguisCabal
@@ -70,3 +73,14 @@ INSTRUCCIONES
             ServerName tianguiscabal.midominio
             ServerAlias tianguiscabal
         </VirtualHost>
+
+7. Agregar el nombre de dominio que escogiste y tu alias a /etc/hosts
+    $ su -c 'gedit /etc/hosts'
+        127.0.0.1        localhost.localdomain localhost
+
+        #
+        # Mis hosts
+        #
+
+        # TianguisCabal
+        127.0.0.1        tianguiscabal.midominio tianguiscabal
