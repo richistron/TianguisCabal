@@ -1,0 +1,58 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\newenvironment{mylisting}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\scriptsize\bfseries}
+{\end{list}}
+
+\newenvironment{mytinylisting}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\tiny\bfseries}
+{\end{list}}
+
+\hyphenation{vi-si-ble}
+
+%opening
+\title{Configuración del TianguisCabal}
+\author{Carlos A. Gonzalez}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+El siguiente documento explica como configurar el proyecto TianguisCabal en Debian GNU/Linux, en Ubuntu y demás distribuciones basadas en Debian GNU/Linux. Al finalizar la instalación, el proyecto estará visible en \texttt{http://localhost/tianguiscabal}. 
+\end{abstract}
+
+\section{Configurando niveles de error en PHP}
+
+En en el archivo \texttt{/etc/php5/apache2/php.ini}, busquen \texttt{error\_reporting}. Así  es como esta en debian:
+
+\begin{mylisting} \begin{verbatim}
+error_reporting = E_ALL & ~E_NOTICE
+\end{verbatim} \end{mylisting}
+
+Y así es como debe de quedar esta linea con los cambios sugeridos:
+
+\begin{mylisting} \begin{verbatim}
+error_reporting = E_ALL |  E_STRICT
+\end{verbatim} \end{mylisting}
+
+\section{Configurando niveles de error en Apache}
+
+En en el archivo \texttt{/etc/apache2/apache2.conf}, busquen \texttt{LogLevel}. Así es como esta en debian:
+
+\begin{mylisting} \begin{verbatim}
+LogLevel warn
+\end{verbatim} \end{mylisting}
+
+Y así es como debe de quedar esta linea con los cambios sugeridos:
+
+\begin{mylisting} \begin{verbatim}
+LogLevel debug
+\end{verbatim} \end{mylisting}
+
+Los errores que tenga apache, se verán en el archivo \texttt{/var/log/apache2/error.log}.
+
+
+\end{document}
