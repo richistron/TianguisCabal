@@ -11,7 +11,7 @@ USE `tianguiscabal`;
 CREATE  TABLE IF NOT EXISTS `tianguiscabal`.`category` (
   `category_id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NOT NULL ,
-  `description` VARCHAR(255) NOT NULL ,
+  `description` VARCHAR(255) NOT NULL DEFAULT 'Dale un valor no seas gacho' ,
   PRIMARY KEY (`category_id`) )
 ENGINE = InnoDB
 COMMENT = 'Holds the Categories';
@@ -29,7 +29,7 @@ CREATE  TABLE IF NOT EXISTS `tianguiscabal`.`user` (
   `email` VARCHAR(45) NOT NULL ,
   `twitter` VARCHAR(45) NULL ,
   `date` DATE NOT NULL ,
-  `role` ENUM('registered', 'moderator', 'admin') NOT NULL DEFAULT 'registered' ,
+  `role` ENUM('new', 'registered', 'moderator', 'admin') NOT NULL DEFAULT 'new' ,
   PRIMARY KEY (`user_id`) )
 ENGINE = InnoDB;
 
@@ -121,6 +121,38 @@ CREATE INDEX `fk_report_user1` ON `tianguiscabal`.`report` (`user_id` ASC) ;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `tianguiscabal`.`category`
+-- -----------------------------------------------------
+SET AUTOCOMMIT=0;
+USE `tianguiscabal`;
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Almacenamiento', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Cables', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Copiadoras', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Fax', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Impresoras', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Miscelanea', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Mouse', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Notebooks', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'PDAs', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Scanners', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Teclados', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Video', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Audio', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Camaras', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Energia', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Gabinetes', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Memoria', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Monitores', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Muebles', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'PCs', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Redes', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Tarjetas Madres', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'Telefonia', '');
+INSERT INTO `category` (`category_id`, `name`, `description`) VALUES (0, 'No Computo', '');
+
+COMMIT;
 
 -- -----------------------------------------------------
 -- Data for table `tianguiscabal`.`user`

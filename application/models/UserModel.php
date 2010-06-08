@@ -45,7 +45,7 @@ class UserModel extends DAO {
   /**
    * Gets a {@link UserModel} from the unique user.name
    * @param string $name
-   * @return UserModel  
+   * @return UserModel
    */
   public static function getByName($name)
   {
@@ -67,7 +67,7 @@ class UserModel extends DAO {
   public static function getLoggedInUser()
   {
     if ( !isset($_SESSION['user_id']) ){
-      return false; 
+      return false;
     }
     $user_id = (int)$_SESSION['user_id'];
     if ( !self::$__logged_user instanceof self ) {
@@ -78,7 +78,7 @@ class UserModel extends DAO {
         unset($_SESSION['user_id']);
         unset(self::$__logged_user);
         return false;
-      }  
+      }
     }
     return self::$__logged_user;
   }
@@ -93,4 +93,8 @@ class UserModel extends DAO {
     self::$__logged_user = NULL;
   }
   
+  public function save(){
+    $this->_data['password'] = sha1($this->_data['password']);
+    return parent::save();
+  }
 }
