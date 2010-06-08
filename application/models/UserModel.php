@@ -6,12 +6,19 @@
  */
 class UserModel extends DAO {
   
-  public function __construct($id){
+  /**
+   * holds the current logged in user
+   * @var UserModel
+   */
+  private static $__logged_user = NULL;
+  
+  public function __construct($id)
+  {
     parent::__construct('user', (int)$id);
   }
   
   /**
-   * Gets All Categories
+   * Gets All Users
    * @return array
    */
   public static function getAll()
@@ -26,7 +33,8 @@ class UserModel extends DAO {
    * @param string $password
    * @return Boolean true on valid password, false otherwise
    */
-  public function validatePassword($password) {
+  public function validatePassword($password)
+  {
     $this->assertLoaded();
     if ( sha1($password) == $this->password ) {
       return true;
@@ -35,11 +43,12 @@ class UserModel extends DAO {
   }
   
   /**
-   *
+   * Gets a {@link UserModel} from the unique user.name
    * @param string $name
-   * @return UserModel
+   * @return UserModel  
    */
-  public static function getByName($name) {
+  public static function getByName($name)
+  {
     $sql = "SELECT user_id
             FROM user
             WHERE name='" . mysql_escape_string($name) . "'
@@ -50,4 +59,38 @@ class UserModel extends DAO {
     }
     return new UserModel($user_id);
   }
+  
+  /**
+   * If there is valid user logged in it returns a loaded instance of it
+   * @return UserModel If there is a valid logged in user, false otherwise
+   */
+  public static function getLoggedInUser()
+  {
+    if ( !isset($_SESSION['user_id']) ){
+      return false; 
+    }
+    $user_id = (int)$_SESSION['user_id'];
+    if ( !self::$__logged_user instanceof self ) {
+      self::$__logged_user = new self($user_id);
+    }
+    if ( !self::$__logged_user->isLoaded() ){
+      if ( !self::$__logged_user->load() ) {
+        unset($_SESSION['user_id']);
+        unset(self::$__logged_user);
+        return false;
+      }  
+    }
+    return self::$__logged_user;
+  }
+  
+  /**
+   * Cleans the logged in user from the session and current static instance
+   * @return void
+   */
+  public static function logout()
+  {
+    unset($_SESSION['user_id']);
+    self::$__logged_user = NULL;
+  }
+  
 }

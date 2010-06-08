@@ -33,7 +33,7 @@ class UserController extends controller
     }
     
     //@todo Create a {@link Session} object to handle session stuff
-    $_SESSION['logged_as'] = $User->getId();
+    $_SESSION['user_id'] = $User->getId();
     $this->gotoPage("/user/view/?user_id=$User->user_id", "You had logged in as ". htmlspecialchars($User->name));
   }
   
@@ -48,6 +48,11 @@ class UserController extends controller
     
     $View->assign('User', $User);
     $View->display();
+  }
+  
+  public function logoutAction() {
+    UserModel::logout();
+    $this->gotoPage('/index', 'Succefully logged out'); 
   }
   
 }
