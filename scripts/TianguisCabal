@@ -1,0 +1,27 @@
+#! /bin/bash
+
+case $1 in
+
+    "sync up")
+        echo "Trepando Cambios"
+        rsync -ave ssh  --delete /home/richistron/TianguisCabal/ tecnova@ps21471.dreamhost.com:/home/tecnova/TianguisCabal/
+        #ln -s tecnova@ps21471.dreamhost.com:/home/tecnova/TianguisCabal/public/* tecnova@ps21471.dreamhost.com:/home/tecnova/tianguiscabal.sistemastecnova.com/
+        #firefox http://www.tianguiscabal.sistemastecnova.com/
+        
+    ;;
+    
+    "sync down")
+        echo "Bajando Cambios"
+        rsync -ave ssh   --exclude="*.git*" tecnova@ps21471.dreamhost.com:/home/tecnova/TianguisCabal/ /home/richistron/TianguisCabal/
+        #ln -s tecnova@ps21471.dreamhost.com:/home/tecnova/TianguisCabal/public/* tecnova@ps21471.dreamhost.com:/home/tecnova/tianguiscabal.sistemastecnova.com/
+        firefox http://www.tianguiscabal.sistemastecnova.com/
+        
+    ;;
+
+    
+
+    *)
+        echo "Esa opcion no existe !! "
+    ;;
+esac
+
