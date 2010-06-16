@@ -27,7 +27,7 @@ function __autoload($class_name)
 
     foreach ( $named_directories AS $name => $directory ) {
         if ( stristr( $class_name, $name ) && $class_name != $name ) {
-            $path = $directory . $class_name;
+            $path = "$directory"."$class_name";
             $is_core = false;
             break;
         }
@@ -35,7 +35,7 @@ function __autoload($class_name)
 
     /** All other classes are inside the core **/
     if ( $is_core ) {
-        $path = '../lib/core/' . $class_name;
+        $path = '../lib/core/'.$class_name;
     }
    
     /** add the application path and the php extension **/
