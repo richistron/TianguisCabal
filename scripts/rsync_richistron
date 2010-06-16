@@ -1,0 +1,56 @@
+#! /bin/bash
+
+################################################################################
+#
+# VARS ZONE
+#
+################################################################################
+
+remote="tecnova@ps21471.dreamhost.com:/home/tecnova/TianguisCabal/"
+
+home="/home/richistron/TianguisCabal/"
+
+url="http://www.tianguiscabal.sistemastecnova.com/"
+
+case $1 in
+
+    "syncup")
+        echo "Trepando Cambios"
+        Limpiador
+        rsync -ave ssh  --delete $home $remote
+        #firefox $url
+        
+        if [ "$2" = "com" ];
+            then
+                cd $home
+                clear
+                git status
+                echo "Esta seguro que desea comitiar ???"
+                echo "y/n"
+                read comfirm
+                if [ "$comfirm" = "y" ] || [ "$comfirm" = "s" ];
+                    then
+                        git commit -a -m "Auto Commit"
+                        git push origin master
+                        #firefox "http://github.com/richistron/TianguisCabal"
+                    fi
+                
+            fi
+        
+    ;;
+    
+    "syncdown")
+        echo "Bajando Cambios"
+        rsync -ave ssh   --exclude="*.git*" $remote $home
+        Limpiador
+        firefox $url
+        
+    ;;
+
+    
+
+    *)
+        echo "Esa opcion no existe !! "
+    ;;
+esac
+
