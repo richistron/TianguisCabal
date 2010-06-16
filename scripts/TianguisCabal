@@ -18,7 +18,7 @@ case $1 in
         echo "Trepando Cambios"
         Limpiador
         rsync -ave ssh  --delete $home $remote
-        firefox $url
+        #firefox $url
         
         if [ "$2" = "com" ];
             then
@@ -30,9 +30,9 @@ case $1 in
                 read comfirm
                 if [ "$comfirm" = "y" ] || [ "$comfirm" = "s" ];
                     then
-                        git commit -a 
+                        git commit -a -m "Auto Commit"
                         git push origin master
-                        firefox "http://github.com/richistron/TianguisCabal"
+                        #firefox "http://github.com/richistron/TianguisCabal"
                     fi
                 
             fi
