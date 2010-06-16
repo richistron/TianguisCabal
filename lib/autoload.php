@@ -39,5 +39,5 @@ function __autoload($class_name)
     }
    
     /** add the application path and the php extension **/
-    require_once APPLICATION_PATH . '/' . $path . '.php';
+    require_once APPLICATION_PATH.'/'.$path.'.php';
 }
