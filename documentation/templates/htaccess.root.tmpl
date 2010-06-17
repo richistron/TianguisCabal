@@ -1,0 +1,8 @@
+#Idea taken from KumbiaPHP, included where by v1llero@gmail.com
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   #The same that the rewrite_base in config.ini and public/.htaccess
+   RewriteBase /tianguiscabal/
+   RewriteRule  ^$ public/  [L]
+   RewriteRule  (.*) public/$1  [L]
+</IfModule>
