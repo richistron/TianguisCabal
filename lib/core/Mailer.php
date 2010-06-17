@@ -22,7 +22,7 @@ class Mailer {
     
     $Config = Config::getInstance();
     
-    if ($Config->email_ssl='on') {
+    if ($Config->email_ssl) {
       $Transport = Swift_SmtpTransport::newInstance($Config->email_server, $Config->email_port,'ssl');
     }else{
       $Transport = Swift_SmtpTransport::newInstance($Config->email_server, $Config->email_port);

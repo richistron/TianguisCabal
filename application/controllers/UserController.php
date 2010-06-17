@@ -83,27 +83,8 @@ class UserController extends controller
     
     $User->save();
     
-    /*if ( ! $User->save() ) {
-      $this->gotoPage('/user/new', 'Couldn\'t save new user');
-    }*/
-    //Load in the files we'll need
-    require_once "../lib/swift/swift_required.php";
-    
-    //Create the message
-    $Message = Swift_Message::newInstance();
-    $Message->setSubject('TianguisCabal Email Validation');
-    $Message->setFrom(array('levhita@gmail.com' => 'TianguisCabal Email Bot'));
-    $Message->setTo( array($User->email => $User->full_name) );
-    $Message->setBody('Please validate your email address by visiting this url');
-    
-    $Transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465,'ssl');
-    $Transport->setUsername('levhita@gmail.com');
-    $Transport->setPassword('password');
-    
-    $Mailer = Swift_Mailer::newInstance($Transport);
-    
-    $Mailer->send($Message);
-    
+    $Mailer = new Mailer();
+    $Mailer->send('Please validate your email account', 'Click Here');   
     $this->gotoPage("/user/view/?user_id=$User->user_id", "User saved as: ". htmlspecialchars($User->name));
   }
 }
