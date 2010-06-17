@@ -54,3 +54,4 @@ case $1 in
     ;;
 esac
 
+#mysql  -h mysqli.consultoriatecnova.com --user tianguis_db --password="tianguisCabal" tianguis_db < /home/tecnova/TianguisCabal/scripts/mysql.sql
