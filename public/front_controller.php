@@ -23,6 +23,11 @@ $Config = Config::getInstance();
  */
 define('BASE_URL', $Config->base_url);
 
+/**
+ * Sets default time-zone
+ */
+date_default_timezone_set($Config->timezone);
+
 /** Ensure lib/ is on include_path **/
 set_include_path(
   implode(
