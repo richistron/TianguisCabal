@@ -3,13 +3,10 @@
  * @package Garson
  */
 
-/**
- * Swift Mailer Include
- */
 require_once "../lib/swift/swift_required.php";
 
 /**
- * Class that handle email sending 
+ * Class that handle email sending
  */
 class Mailer {
   /**
@@ -33,13 +30,13 @@ class Mailer {
     $this->__Mailer = Swift_Mailer::newInstance($Transport);
   }
   
-  public function send($subject, $body) {
+  public function send($email, $full_name, $subject, $body) {
     $Config = Config::getInstance();
     
     $Message = Swift_Message::newInstance();
     $Message->setSubject($subject);
     $Message->setFrom(array($Config->email_from => $Config->email_name));
-    $Message->setTo( array($User->email => $User->full_name) );
+    $Message->setTo( array($email => $full_name) );
     $Message->setBody($body);
     
     return $this->__Mailer->send($Message);

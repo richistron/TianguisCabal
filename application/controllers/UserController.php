@@ -84,7 +84,7 @@ class UserController extends controller
     $User->save();
     
     $Mailer = new Mailer();
-    $Mailer->send('Please validate your email account', 'Click Here');   
+    $Mailer->send($User->email, $User->full_name, 'Please validate your email account', 'Click Here');
     $this->gotoPage("/user/view/?user_id=$User->user_id", "User saved as: ". htmlspecialchars($User->name));
   }
 }
