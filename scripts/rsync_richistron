@@ -28,9 +28,10 @@ case $1 in
                 echo "Esta seguro que desea comitiar ???"
                 echo "y/n"
                 read comfirm
+                time=$( date | gawk -F: '{ print}' )
                 if [ "$comfirm" = "y" ] || [ "$comfirm" = "s" ];
                     then
-                        git commit -a -m "Auto Commit"
+                        git commit -a -m "Auto Commit '$LOGNAME' ... '$time'"
                         git push origin master
                         #firefox "http://github.com/richistron/TianguisCabal"
                     fi

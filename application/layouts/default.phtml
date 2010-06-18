@@ -13,6 +13,7 @@ header("Content-Type: text/html; charset=utf-8");
 
 /* Default XML and Encoding settings */
 echo '<?xml version="1.0" encoding="UTF-8"?>';
+$User = UserModel::getLoggedInUser();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -40,6 +41,14 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         
         <div id="header">
             <h1><a href="<?php echo BASE_URL?>">Tianguis Cabal</a><?php echo $_title_?></h1>
+            <div id="logged_in">
+            <?php
+            if ($User) {?>
+              Sesión iniciada como <strong><?php echo htmlspecialchars($User->full_name);?></strong><br/><a href="<?php echo BASE_URL ?>/user/logout">Terminar Sesión</a>
+            <?php } else { ?>
+              <a href="<?php echo BASE_URL ?>/user">Login</a>
+            <?php }?>
+            </div>
         </div>
         
         <div id="content">

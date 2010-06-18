@@ -12,8 +12,10 @@
  *
  * @package Garson
  */
-function __autoload($class_name)
-{
+class Autoloader {
+
+  public static function autoload($class_name)
+  {
     $class_name = ucwords($class_name);
     
     /** Application Specific Classes are inside this directories **/
@@ -39,5 +41,24 @@ function __autoload($class_name)
     }
    
     /** add the application path and the php extension **/
+<<<<<<< HEAD:lib/autoload.php
     require_once APPLICATION_PATH.'/'.$path.'.php';
 }
+=======
+    if ( !file_exists(APPLICATION_PATH . '/' . $path . '.php') ) {
+      return false;
+    }
+    require_once APPLICATION_PATH . '/' . $path . '.php';
+  }
+  
+  /**
+   * Configure autoloading using Core
+   *
+   * This is designed to play nicely with other autoloaders.
+   */
+  public static function registerAutoload()
+  {
+    spl_autoload_register(array('Autoloader', 'autoload'));
+  }
+}
+>>>>>>> 07d9d50d028aa82fc8dd6d4b36d10cfdf7cc5b64:lib/Autoloader.php

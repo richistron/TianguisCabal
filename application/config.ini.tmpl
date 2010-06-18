@@ -1,0 +1,35 @@
+; Database Configuration
+db_host="localhost"
+db_user="root"
+db_password=""
+db_name="tianguiscabal"
+
+; Language configuration
+default_language = "es_MX"
+
+; Timezone
+timezone = "America/Mexico_City"
+
+;Loging Settings
+;Valid options are text, web, both, none
+log_level="web"
+log_file="../tmp/log.csv"
+
+;Full browser path to the visible instance of Tianguis Cabal
+base_url="http://localhost/path/to/tianguiscabal"
+
+;In your local config you might need to reconfig this, by example lets say that
+;your local _public_ dir is viewable by: http://localhost/path/to/tianguiscabal/
+;then your rewrite base would be: /path/to/tianguiscabal/
+;in a server where "public" is visible directly in http://domain/, leave this as "/"
+;Must be the same than RewriteBase in .htaccess
+rewrite_base="/path/to/tianguiscabal/"
+
+;Email settings
+email_from = "account@gmail.com"
+email_name = "TianguisCabal Mailer"
+email_server = "smtp.gmail.com"
+email_port = 465
+email_login = "account@gmail.com"
+email_password ="password"
+email_ssl = on

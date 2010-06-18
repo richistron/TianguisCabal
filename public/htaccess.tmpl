@@ -6,8 +6,13 @@
   #your local _public_ dir is viewable by: http://localhost/path/to/tianguiscabal/
   #then your rewrite base would be: /path/to/tianguiscabal/
   #in a server where "public" is visible directly in http://domain/, leave this as '/'
+<<<<<<< HEAD:documentation/templates/htaccess.tmpl
   #Used in conjunction with web_root in config.ini
   RewriteBase /TianguisCabal/public/
+=======
+  #Must be the same than rewrite_base in config.ini 
+  RewriteBase /path/to/tianguiscabal/
+>>>>>>> 07d9d50d028aa82fc8dd6d4b36d10cfdf7cc5b64:public/htaccess.tmpl
   
   #These rules exclude real files and directories from the rewriting and lets them
   #pass through unaffected:(uncomment IF NEEDED).
