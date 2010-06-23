@@ -29,20 +29,6 @@ class UserModel extends DAO {
   }
   
   /**
-   * Validates if the given password match the password in the database
-   * @param string $password
-   * @return Boolean true on valid password, false otherwise
-   */
-  public function validatePassword($password)
-  {
-    $this->assertLoaded();
-    if ( sha1($password) == $this->password ) {
-      return true;
-    }
-    return false;
-  }
-  
-  /**
    * Gets a {@link UserModel} from the unique user.name
    * @param string $name
    * @return UserModel
@@ -93,8 +79,24 @@ class UserModel extends DAO {
     self::$__logged_user = NULL;
   }
   
-  public function save(){
-    $this->_data['password'] = sha1($this->_data['password']);
-    return parent::save();
+  /**
+   * Validates if the given password match the password in the database
+   * @param string $password
+   * @return Boolean true on valid password, false otherwise
+   */
+  public function validatePassword($password)
+  {
+    $this->assertLoaded();
+    return ( sha1($password) == $this->_data['password'] );
+  }
+  
+  public function validateCode($code) {
+    return ($code === $this->generateCode() );
+  }
+  
+  public function generateCode(){
+    $this->assertLoaded();
+    $Config = $Config = Config::getInstance();
+    return sha1($this->email + $this->name + $Config->salt);
   }
 }
