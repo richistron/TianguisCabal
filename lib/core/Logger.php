@@ -31,7 +31,7 @@ class Logger {
     
     /* Creates Log array */
     $log = array (
-            'time'    => time(),
+            'time'    => date("D M j G:i:s T Y"),
             'level'   => $level,
             'name'    => $name,
             'uri'  => $_SERVER['REQUEST_URI'],

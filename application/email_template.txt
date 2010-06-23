@@ -1,0 +1,10 @@
+Hi {full_name} you has registered as '{name}', Now please
+visit the following url to validate your email address:
+
+{validation_url}
+
+If you can't click directly in the url, copy & past it
+into the address bar.
+--
+TianguisCabal Happy Mailer Bot
+{base_url}
